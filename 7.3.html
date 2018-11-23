@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>INHERITANCE</b>  <br>
+problem # &nbsp; 7.3</div>
+
+</h6>
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">class X {</a> </li>
+<li><a class="a1">void m1 () {</a> </li>
+<li><a class="a2">System.out.print("0"); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">final int m1(int i) { </a> </li>
+<li><a class="a2">System.out.print("i"); </a> </li>
+<li><a class="a2">return i;</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">int m1(long l) {</a> </li>
+<li><a class="a2">System.out.print("l"); </a> </li>
+<li><a class="a2">return (int) l; </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">} </a> </li>
+<li><a class="a0">public class Y extends X {</a> </li>
+<li><a class="a1">int m1() { </a> </li>
+<li><a class="a2">return m1(3);</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">public static void main(String[] args) {</a> </li>
+<li><a class="a2">X anInstance = new Y();</a> </li>
+<li><a class="a2">System.out.print(anInstance.m1 ()); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+<div id="solution" class="hidden">
+<h2>
+
+The call to method m1, inside of the <em>println</em> statement on line 20, prompts <em> method 
+<b>overriding</b></em> to occur - between methods <em>m1</em> on lines 2
+and 15. However, for <em>overriding</em> to be successful, <b><em>both methods must have 
+an identical method signature and return type</b></em> (<em>note</em>: an exception to this is – <u>it is acceptable for a 
+subclass method's <em>return type</em>, to be a subclass of it's base class method's 
+<em>return type</em></u>). 
+<br>
+<br>
+
+If the <em>matching method and return signature</em> requirement for <em>overriding</em>
+ to occur is <em><u>not</u></em> met, as in this example, a compilation error will result.
+<br>
+<br>
+<em>Note: Since the method at line 15 includes a return statement (at line 16), simply substituting a 
+<u>void</u> return type
+in the place of it's <u>int</u> return type would, alone, still not be a sufficient enough modification to 
+enable this code to successfully compile.</em>
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

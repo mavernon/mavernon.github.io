@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1> -->
+
+<br>
+<h6>
+<div class="blue"><b>USING LOOP CONSTRUCTS</b>  <br>
+problem # &nbsp; 5.7</div>
+
+</h6>
+
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">public class Test{</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a2">int i = 0, c1 = 0, c2 = 0 ;</a> </li>
+<li><a class="a2">while (++i < 10) {</a> </li>
+<li><a class="a3">if(i % 2 == 0) </a> </li>
+<li><a class="a4">c1++;</a> </li>
+<li><a class="a2">}</a> </li>
+<li><a class="a2">i = 0;</a> </li>
+<li><a class="a2">do {</a> </li>
+<li><a class="a3">if(i % 2 == 0)</a> </li>
+<li><a class="a4">c2++;</a> </li>
+<li><a class="a2"> } while (++i < 10);</a> </li>
+<li><a class="a2">System.out.println(c1 == c2);</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
+
+</div>
+<br>
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+<div id="solution" class="hidden">
+<h2>
+ A <em><b>while (loop)</b></em> statement is aways followed by a condition which, after being evaluated, is 
+ determined to be either true or false. If the condition is true, and 
+ is further followed by some other type of action or logic, then that action gets executed.
+ Otherwise, if a <em>while loop's</em> condition evaluates to false, no looping occurs and instead,
+   the code flows directly to the next statement following the <em>while loop</em>.
+ 
+ <br><br>
+ 
+ 
+ In this example, the condition defined in the first <em>while loop</em> (at line 4) is initially true. This causes the 
+  flow of the code to continuously repeat, and increment both the value of "c1" and "i" 
+  (<em>due to the </em>++ <em>operator</em>), until the <em> loop's</em> 
+  condition statement evaluates to false. Ultimately, the first <em>while loop</em> results in a 
+  value of "4" for variable "c1" - while the  
+  assignment statement (at line 8) that immediately follows it re-assigns the variable "i" to its initial value
+  of zero, before the <em>do while</em> loop (at line 9) begins executing.
+  <br><br>
+  
+  The purpose of a <em>do</em> statement is to execute a segment of code - at least once,
+  before a <em>while loop</em> begins. This keeps any condition that 
+   follows 
+  a <em>while loop</em>, <u>from restricting or otherwise impacting 
+  the <em>do</em> segment of code - for at least one iteration</u>, before the <em>do</em> segment
+   of code invariably becomes subject to the result of the <em>while loop's</em> condition statement.
+  
+  <br><br>
+  
+ This continues repeatedly, until (<em>or unless</em>) the 
+  <em>while loop</em> condition evaluates to false, at which time   
+ <em>looping</em> stops (interestingly however, the 
+ <em>do</em> segment of code <em>always</em> executes one final time - even after the 
+ <em>while loop</em> condition evaluates to false ...).
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

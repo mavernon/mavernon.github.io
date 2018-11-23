@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>METHODS AND ENCAPSULATION</b>  <br>
+problem # &nbsp; 6.5</div>
+
+</h6>
+
+<div class="frame">
+<ol >
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static int i = 2;</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a2">int i = 8;</a> </li>
+<li><a class="a2">Test anInstance = new Test(); </a> </li>
+<li><a class="a2">anInstance.multiply(i);</a> </li>
+<li><a class="a2">System.out.println(i);</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">public void multiply(int i) {</a> </li>
+<li><a class="a2">i = i * 3;</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol> 
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+In this example, a single variable identifier <em>"i"</em> is used as both a 
+<em><u>static</u></em> variable at line 2, and a <em><u>local</u></em> variable 
+at line 4. In other words, <em>the <u>same identifier</u> is used within two <u>
+different scopes</u></em> (i.e. <em>"i"</em> has a different characteristic and value 
+- that affects different segments of code - at different times).
+Managing this type of situation is done automatically, through
+ <em><b>shadowing</b></em> (explained in the details of problem 
+<a href="6.2.html" >6.2</a>).
+
+<br>
+<br>
+When this code is run, the statement at line 6, via the <em>object instance</em> created at line 5, 
+calls method <em>multiply</em> (on line 9). The value of the <em><u>local</u></em> variable “i”, 
+is passed as an argument, to fulfill the method’s parameter requirement. Yet,  
+<span style="color: #A52A2A">method <em>multiply</em> 
+has a
+<u>void</u> return type</span>. So, it doesn't return a value
+to the <em>object instance</em> (method <em>caller</em>) at line 6.
+<br>
+<br>
+Meanwhile, <em>shadowing</em>, as noted earlier, ensures 
+that the value of the <u><em>local</em></u> variable "i" <em><b>is</b></em> referenced at line 7, and 
+<em><u>not</u></em>  
+the value of the <em>static</em> variable "i" at line 2 (<em>i.e. the static variable is hidden</em>). 
+
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

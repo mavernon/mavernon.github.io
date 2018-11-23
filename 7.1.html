@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>INHERITANCE</b>  <br>
+problem # &nbsp; 7.1</div>
+
+</h6>
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">public abstract class Test extends Super {</a> </li>
+<li><a class="a1">String a;</a> </li>
+<li><a class="a1">public void SubclassMeth() {</a> </li>
+<li><a class="a2">System.out.println("SubclassMeth");</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a1">private Test () {</a> </li>
+<li><a class="a2">String a = "Zebra";</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+An <em><b>abstract class</b></em> is <em><u>not</u></em>
+ required to have any
+<em><u>abstract methods</u></em>. 
+<br>
+<br>
+However, <span style="color: #A52A2A"><em>a class that</em> contains even one 
+<em><b>abstract method</b></em>, must be labeled <em><b>abstract</b></em></span>.
+<br>
+<br>
+The other circumstance when a class <u><em>must</em></u> be labeled abstract is, <u>when it 
+<em>extends</em> an <em>abstract</em> base class</u> – but doesn’t implement any of the base class' methods.
+An abstract class similar to the one in this example (assuming that it were the <em>subclass</em> of 
+an abstract <em>super class</em>) is an example of that. 
+<br>
+<br>
+Ultimately, any class that <em>calls</em> an <em>abstract</em> class (either through inheritance, or otherwise) 
+<u>must</u> <em>provide implementation code for the abstract class' methods</em> (if they exist) – unless that class 
+<u>is itself labeled <em>abstract</em></u>.
+<br>
+<br>
+
+An <em><span style="color: #0000CD">abstract class</span></em> is typically designed to be an <em><u>abstraction</u></em> (e.g. similar to – but
+<em><span style="color: #0000CD">a more general version</em>) of a concrete class</span>. Moreover, 
+while a concrete class can only extend <em>one</em> other
+concrete class, <em>there is <u>no restriction on how many abstract classes that they can extend</u>
+</em> (which provides concrete classes with a significant amount of flexibility).
+<br>
+<br>
+Abstract classes <u>cannot be <em>directly</em> instantiated</u>. Despite that, it <em><u>is</u></em> 
+possible (although somewhat counterintuitive) for an 
+abstract class to even have a constructor (as shown at line 7).
+
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

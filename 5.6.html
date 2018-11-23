@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1> -->
+
+<br>
+<h6>
+<div class="blue"><b>USING LOOP CONSTRUCTS</b>  <br>
+problem # &nbsp; 5.6</div>
+
+</h6>
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a2">goHere:</a> </li>
+<li><a class="a2">for (int i = 1; i < 7; i++) {</a> </li>
+<li><a class="a3">for (int j = 1; j < 5; j++) {</a> </li>
+<li><a class="a4">System.out.print ( i + ",");</a> </li>
+<li><a class="a4">if (i == 1 || i == 4) break ; </a> </li>
+<li><a class="a4">if (i == 5 && j == 3) break goHere; </a> </li>
+<li><a class="a3">}</a> </li>
+<li><a class="a2">}</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+
+</ol>
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+ The first target of the inner <em>for loop</em> at line 5, is the <em>System.out.println</em> 
+ statement (at line 6), which contains a reference to the variable "i". This is a bit <em>
+ deceptive and confusing,</em> since "i" is <em>initially</em> introduced at line 4, as part of the
+ definition of the first <em>for loop</em> 
+  
+  ... seems more intuitive that a <em>for loop</em> definition/reference, and it's associated 
+  <em>loop</em> target, would be written adjacent to one another. 
+ <br><br>
+ The fact that the inner 
+ <em>for loop</em> is nested within the outer <em>for loop</em> definition, provides a hint that 
+ the variable "i" is within the scope of the inner loop.
+ <br><br>
+ Ultimately, when the code flow returns to the inner <em>for loop</em>,
+ after the first break at line 7 (at which point "i" equals 2) the deceptively located <em>System.out.println</em>
+ loop target, ensures that the variable "i" is printed to output at least four times, for both values 2, and 3;
+ before the code flow again is interrupted by the first break.
+ 
+ Finally, the last <em>if statement</em> gets invoked after "i" is output as the value 5, three times, via
+ the inner <em>for loop</em>, which then terminates the program. That makes the final output to this code: 
+ 1,2,2,2,2,3,3,3,3,4,5,5,5,
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

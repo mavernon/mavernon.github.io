@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>METHODS AND ENCAPSULATION</b>  <br>
+problem # &nbsp; 6.1</div>
+
+</h6>
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">static int counter = 0;</a> </li>
+<li><a class="a1">static void m1(String... a) {</a> </li>
+<li><a class="a2">counter++;</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a2">m1 ();</a> </li>
+<li><a class="a2">m1 (null);</a> </li>
+<li><a class="a2">m1 (new String[] {"a", "b", "c"} );</a> </li>
+<li><a class="a2">System.out.print(counter);</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+<em>When a class is <u>compiled</u></em>, the compilation process parses and identifies static members 
+that are spontaneously executed  
+(at <em>runtime</em>), <em>generally</em> 
+before any other code processing occurs. This execution of static members doesn't require an
+ object to be instantiated -  
+or to even exist. A <em><b>static method</b></em>'s execution is <em>triggered 
+by the availability
+of arguments</em> that meet its definition criteria. 
+<br>
+<br>
+This means that, at runtime, <em>static method <b>m1</b></em> (on line 3) <em><u>references</u></em> 
+any method with
+the same name and argument, and causes it to spontaneously execute - as if it were called directly. 
+Since the  <em>static method</em> uses a
+ <em><u>varargs</u></em> as part of it's notation, under this scenario, each of the
+m1 methods in the main method (and their <em>cast-able</em> argument type) is a legitimate 
+target, and gets invoked (<em>without the need to instantiate an object</em>).
+
+<br>
+<br>
+
+Moreover, in this problem, every time that the <em>static</em> method <em>references</em> 
+one of these target methods 
+invoking it, the value of the class' static variable, <em>counter</em>, (which is mirrored in the 
+body of the <em>static</em> method) increments by 1. 
+<br>
+<br>
+The final value of the <em>static variable</em> in this example (at line 10), is 3. 
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

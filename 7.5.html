@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>INHERITANCE</b>  <br>
+problem # &nbsp; 7.5</div>
+
+</h6>
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">class X {</a> </li>
+<li><a class="a1">int n; </a> </li>
+<li><a class="a1">X() { </a> </li>
+<li><a class="a2">n = 0; </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">X(int i) { </a> </li>
+<li><a class="a2">n = i;</a> </li>
+<li><a class="a2">System.out.println(" int"); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+<li><a class="a0">class Y extends X { </a> </li>
+<li><a class="a1">Y(char c) { </a> </li>
+<li><a class="a2">n = c; </a> </li>
+<li><a class="a2">System.out.println(" char"); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">Y(double d) { </a> </li>
+<li><a class="a2">n = (int) d;</a> </li>
+<li><a class="a2">System.out.println(" double"); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+<li><a class="a0">public class Z extends Y { </a> </li>
+<li><a class="a1">Z() {</a> </li>
+<li><a class="a2">super(new Integer(1)); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">public static void main(String[] args) {</a> </li>
+<li><a class="a2">new Z(); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+When classes have an inheritance relationship, the flow of logic between them travels via 
+<em>constructor chaining</em>.
+<br>
+<br>
+<em><b>Constructor chaining</b></em> occurs <span style="color: #0000CD">when the default 
+constructor of a subclass, <em>references</em> the 
+default constructor of it's super class </span>. Alternatively, constructor chaining can occur if the 
+default constructor of a subclass includes a constructor reference that is <em>syntactically identical</em> 
+to a super class constructor (e.g. line 23).
+<br>
+<br>
+The example code above combines <em>constructor chaining</em> with <em><b>unboxing</b></em>, and 
+<em><b>casting</b></em>. 
+<br>
+<br>
+The base class at 
+line 21 is chained to its super class at line 16, via the super class constructor reference at line 23 (<em>in this case, 
+</span><span style="color: #0000CD"><u>unboxing</u> from an Integer to a int type 
+occurs simultaneously</span></em>) . The constructor 
+at line 16 is then chained to its super class reference - the <em>default</em> constructor at line 3.
+
+<br>
+<br>
+Following the execution of the constructor at line 3, when the constructor at line 16 executes, 
+the <em>cast</em> that occurs (at line 17) converts the value of the argument supplied 
+to the constructor – to an int.  
+<br>
+<br>
+<em>
+Note: When unboxing and chaining occur simultaneously at the very beginning of this example, 
+the reason that the constructor 
+at line 16 is able to accept an int type as an argument is
+because, </span><span style="color: #0000CD"><u>an int can be automatically converted to a 
+double without any mathematical loss of precision</u></span>.
+</em>
+<br>
+<br>
+The final result of this problem is the output of the  <em>String</em>, "double", from line 18.
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

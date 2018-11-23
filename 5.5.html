@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1> -->
+
+<br>
+<h6>
+<div class="blue"><b>USING LOOP CONSTRUCTS</b>  <br>
+problem # &nbsp; 5.5</div>
+
+</h6>
+
+
+<div class="frame"> 
+<ol >
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a2">String [ ] array = { "a", "b", "c", "d" }</a> </li>
+<li><a class="a2">String letter = " "; </a> </li>
+<li><a class="a2">for (letter : array)  </a> </li>
+<li><a class="a3">System.out.print (letter);</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+ This example code uses an <em><b>enhanced for loop</b></em> (at line 5). 
+ 
+<br>
+<br>
+<em>Enhanced for loops</em> include a variable (as part of the <em>loop</em> definition), 
+that identifies/tags each member 
+as it <em>iterates</em> through the loop target.
+<br><br>
+Unfortunately, the<em> enhanced for loop</em> in this example uses the incorrect syntax 
+to declare the <em>loop variable</em> (at line 4), and as a result, attempting to execute this code
+fails -- and returns a compiler error. 
+<br>
+<br>
+The correct way to write an <em>enhanced 
+for loop (as shown below)</em>, is to <u>include it's variable <em><b>type</b> within the loop definition
+</u></em> (instead of separately,
+outside of the loop definition):
+
+</h2>
+
+<div class="bText"><b>for (String letter : array)</b></div>
+
+ <h2>
+ 
+ 
+ In addition to inserting the correct syntax above at line 5, line 4 of the original  
+ sample should be removed as well - in order to successfully compile and run
+ the code.<br><br>
+ 
+ In a traditional <em>for loop</em>, the for loop target is written <em>after</em>
+ the definition (for example, in problem 
+ <a href="5.4.html"  > <em><b>5.4</b></em></a> the
+  <em>if statement</em> (target) is written <em>
+ after</em> the <em>for loop</em> definition). On the other hand, when an 
+ <em><u>enhanced</u> for loop</em> is implemented, the loop target (i.e. the String array in the
+ code above) is written <em>before</em> the <em>loop</em> definition.
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

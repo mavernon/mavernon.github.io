@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>METHODS AND ENCAPSULATION</b>  <br>
+problem # &nbsp; 6.8</div>
+
+</h6>
+
+<div class="frame">
+<ol >
+<li><a class="a0">class Test {</a> </li>
+<li><a class="a1">Test (int i)  { </a> </li>
+<li><a class="a2">System.out.println("int");</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">Test (long l)  { </a> </li>
+<li><a class="a2">System.out.println("long");</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">void Test ()  { </a> </li>
+<li><a class="a2">System.out.println("default");</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">public static void main(String[] args) {</a> </li>
+<li><a class="a2">Test t1 = new Test();</a> </li>
+<li><a class="a2">Test t2 = new Test(1);</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol> 
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+The <em>new</em> keyword, at line 12, prompts a <em>new</em> object instance to be created <em>from a 
+<span style="color: #A52A2A"><u><b>default</b></u></span></em> 
+(i.e. <em><span style="color: #A52A2A">no-argument</span></em>) 
+<em><span style="color: #A52A2A"><b>constructor</b></span></em> – but no 
+<em>default constructor</em> is included in this class.
+<br>
+<br>
+Under most circumstances, if no explicit 
+<em>default </em>(<em>no-argument</em>) <em>constructor</em> exists,
+the java compiler will automatically create a <em>default </em>(<em>no-argument</em>) 
+<em>constructor</em> (to facilitate compilation of the code, and enable a 
+<em>no-argument</em> object instance to be built).
+
+<br>
+<br>
+However, if the class of the object being instantiated <em>already 
+contains constructors</span></em>  - 
+<u>but none of them are default constructors</u> (as in this case, at lines 2 and 5), then <em>a default 
+constructor will <u>not</u> automatically be added</em> by the compiler. This results in an
+inability for the code to create a required (<em>no-argument</em>) object instance, causing
+code compilation to fail.
+<br>
+<br>
+As noted, the class in this example includes two constructors that require a primitive argument (at lines 2 and 5),
+as well as, a <em><span style="color: #0000CD">method</span></em> (at line 8) that returns no object. 
+So, since there is no 
+<em>default </em>(<em>no-argument</em>) <em>constructor</em> available 
+(to facilitate building a new <em>no-argument</em> 
+instance of the class, as required by the <em>new</em> keyword at line 12), the compilation 
+of the code fails.
+
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

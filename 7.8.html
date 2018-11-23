@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>INHERITANCE</b>  <br>
+problem # &nbsp; 7.8</div>
+
+</h6>
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">class A {} </a> </li>
+<li><a class="a0">class B extends A {}</a> </li>
+<li><a class="a0">interface C {}</a> </li>
+<li><a class="a0">class D extends A {} </a> </li>
+<li><a class="a0">class E implements C {} </a> </li>
+<li><a class="a0">interface F extends C {} </a> </li>
+<li><a class="a0">class G { </a> </li>
+<li><a class="a1">A m1() { </a> </li>
+<li><a class="a2">return new A();</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+<li><a class="a0">public class H extends G { </a> </li>
+<li><a class="a1"><span style="color: #A52A2A"><b>___</b></span> m1() { </a> </li>
+<li><a class="a2">return new D(); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
+<!--
+class A {} 
+class B extends A {} 
+interface C {} 
+class D extends A {} 
+class E implements C {} 
+interface F extends C {} 
+class G { 
+  A m1() { return new A(); 
+  } 
+} 
+public class H extends G { 
+___ m1() { return new D(); 
+   } 
+} -->
+
+
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+Given the structure of this code, the only possible  
+<em><b><u>return type</u></b></em> for use with
+ method <em>m1</em>, at line 13, is either <em>A</em> or <em>D</em>.
+<br>
+<br>
+The reason for this is, ... <!--
+When a method uses a class name as its return type, the class of the type of the returned 
+object must be either a subclass of, or the exact class of, the return type.
+-->
+
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

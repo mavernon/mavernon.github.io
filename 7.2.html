@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>INHERITANCE</b>  <br>
+problem # &nbsp; 7.2</div>
+
+</h6>
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">class X {</a> </li>
+<li><a class="a1">static int y = 3;</a> </li>
+<li><a class="a1">X(int x) { </a> </li>
+<li><a class="a2">y = y * 4; </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">X() { </a> </li>
+<li><a class="a2">this( y); </a> </li>
+<li><a class="a2">++ y; </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+<li><a class="a0">public class Y extends X { </a> </li>
+<li><a class="a1">public static void main( String[] args) { </a> </li>
+<li><a class="a2">new Y(); </a> </li>
+<li><a class="a2">System.out.println(y);</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">Y() { </a> </li>
+<li><a class="a2">y = y + 1; </a> </li>
+<li><a class="a1">} </a> </li>
+<li><a class="a0">}</a> </li>
+
+</ol>
+
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+This example demonstrates the use of both <em><b>class inheritance</b></em> and 
+<em><b>constructor chaining</b></em>.
+<br>
+<br>
+<em>Constructor chaining</em> forces class Y' <em>default</em> constructor at line 16 
+to reference the <em>default</em> constructor of the base class (line 6), before it executes - itself. 
+This results in the base class default constructor at line 6 being invoked immediately after class Y is instantiated 
+(line 13). 
+When executed, the default base class constructor calls the <em>one-argument</em> base class constructor 
+at line 3 (via the <em><u>this</u></em> keyword at line 7) -
+passing it the value (<em>3</em>) of the static variable <em>"y"</em> (located on line 2) as a argument.
+<br>
+<br>
+Although the naming convention (i.e. x) used in assigning the parameter variable identifier at line 3 is 
+somewhat confusing, it is legal and has no quantifiable impact on the outcome of the solution. Ultimately, 
+the constructor executes and assigns the value of 12 to the static variable "y" (at line 4).
+<br>
+<br>
+Following the assignment at line 4, the code flow returns to the constructor at line 6, and executes the
+statement at line 8 (increasing the value of the static variable "y" to 13). The flow then returns to the 
+constructor at line 16, where the static variable is again increased by the value of 1, and ultimately
+output (as 14) at line 14.
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>

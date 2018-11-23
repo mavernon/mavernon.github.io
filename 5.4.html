@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1> -->
+
+<br>
+<h6>
+<div class="blue"><b>USING LOOP CONSTRUCTS</b>  <br>
+problem # &nbsp; 5.4</div>
+
+</h6>
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a2">for (int i = 0; i < 10; i = 2) { </a> </li>
+<li><a class="a2">if  (i % 2  != 0) System.out.println(i); </a> </li>
+<li><a class="a2">}</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+After the initialization expression completes, the second expression in the <b><em>for loop</em></b> 
+statement (at line 3), <em>i < 10</em>, evaluates 
+to true, and enables the evaluation of the <em>for loop <u>target</u></em> 
+(the <em>if</em> statement) located on line 4.
+<br>
+<br>
+
+The first time that the initial <em>if</em> statement logic <em> in parenthesis</em> is evaluated, 
+the result is false. This halts any further processing of the <em>if</em> statement and forces the code
+flow to return to the <em>for loop</em> statement definition – where the third expression in the 
+<em>for loop</em> statement definition (<em> which is designed to assign a new value to the variable
+used in the second expression in the for loop</em>) 
+automatically executes – before anything else occurs. 
+<br>
+<br>
+Following the execution of the third expression in the <em>for loop</em>, the code flow again returns 
+to the second expression in the <em>for loop</em> statement, and evaluates it.
+<br>
+<br>
+
+In this example, the third expression (at line 3) uses an <em><b>assignment operator</b></em> 
+ (<em>as opposed to an increment or decrement operator</em>)  to assign the value of 2, to the 
+ variable  “<em>i</em>”, and as a result, every time that the loop repeats - <em>after the first for loop</em> iteration, 
+ the variable "i" will <em><u>always</u></em> equal the value 2. 
+ 
+<br>
+<br>
+ The result of this <u>recurring, identical variable assignment</u> is that, <em>the for loop definition 
+ creates an infinite loop</em> (i.e. the loop definition has no way of stopping the 
+ <em> for loop</em> from iterating).
+<br>
+<br>
+This <em>basically</em> makes the <em>loop</em> target (i.e. the<em> if statement,</em> at line 4)
+irrelevant - since the code flow always returns to the 
+<em>for loop</em>.
+<br>
+<br>
+That said, <em><b>if</b></em> the <em>for loop</em> <u>target</u> (the<em> if statement</em>)
+did evaluate to <em>True</em>, then 
+any directives or logic that followed the target (such as the <em>println</em> statement that follows the <em>if</em> at
+line 4) <em><u>would</u></em> be invoked 
+(e.g. the value of the variable  “i” would be printed at every loop iteration).
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>
