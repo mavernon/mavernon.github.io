@@ -48,27 +48,11 @@ problem # &nbsp; 7.8</div>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
 <li><a class="a0">public class H extends G { </a> </li>
-<li><a class="a1"><span style="color: #A52A2A"><b>___</b></span> m1() { </a> </li>
+<li><a class="a1"><span style="color: #A52A2A"><b>__</b></span> m1() { </a> </li>
 <li><a class="a2">return new D(); </a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
 </ol>
-<!--
-class A {} 
-class B extends A {} 
-interface C {} 
-class D extends A {} 
-class E implements C {} 
-interface F extends C {} 
-class G { 
-  A m1() { return new A(); 
-  } 
-} 
-public class H extends G { 
-___ m1() { return new D(); 
-   } 
-} -->
-
 
 
 </div>
@@ -80,16 +64,46 @@ ___ m1() { return new D();
 
 <div id="solution" class="hidden">
 <h2>
-Given the structure of this code, the only possible  
-<em><b><u>return type</u></b></em> for use with
+The code in this example uses <em>objects</em> (instead of <em>primitives</em>) as
+<u><em>method types</em></u>.
+<br>
+<br>
+As a result, given the structure of this code, the only  
+<em><b>return <u>type</u></b></em> that can be used to declare
  method <em>m1</em>, at line 13, is either <em>A</em> or <em>D</em>.
 <br>
 <br>
-The reason for this is, ... <!--
-When a method uses a class name as its return type, the class of the type of the returned 
-object must be either a subclass of, or the exact class of, the return type.
+The reason for this is, the <em>return <u>type</u></em>
+of a method that <em><b>overrides</b></em> another method 
+(e.g. the method at line 13 overrides the method at line 8)
+, must be 
+<span style="color: #0000CD"> the same 
+<em>type</em> as the method it overrides</span> (e.g. at line 8) -- 
+<span style="color: #0000CD">or a <em>subclass</em> of that type</span>
+ (i.e. D is a subclass of A ... <em>at line 4</em>).
+<br>
+<br>
+Note: If method m1 is declared as type A, at line  13, the return statement at line 14 must
+also be of type A (i.e. <em>a D object <u>can</u> be an A, but an A object <u>cannot</u> be a D</em>).
+<br>
+<br>
+Also, the <em><u>access modifier</u></em> of the <em>overriding method <u>can be less restrictive</u></em>
+ than the access modifier of the method that it overrides (e.g. protected vs. default). Otherwise, 
+the access modifiers for both methods must be the same.
+<!--
+as the return statement <em>inside the method</em></span> (e.g. 
+at line 14).
+
+, or  <span style="color: #0000CD"> a <em>type</em> that is the subclass of the 
+class in which the method is declared</span> (e.g. class H is a <em>subclass</em> of class G,
+which includes a method declaration of <em>type</em> A). 
 -->
 
+<!--
+In other words, if class G did NOT include a method that was overridden by the method
+at line 13 – even though class G were the parent class of the  method at line 13,
+
+-->
 <br>
 <br>
 <br>
