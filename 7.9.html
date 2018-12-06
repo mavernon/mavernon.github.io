@@ -73,12 +73,22 @@ provided</em>,  when the <em>new</em> keyword prompts the creation of Test objec
 The presence of the (<em>invisible</em>) default constructor in class Test, causes it to be automatically 
 chained to the <em>default</em> constructor 
 of the parent class, A (i.e. the flow of code transitions from one constructor to the next) .
-Since no output is generated when the parent class default constructor, and (then) the subclass constructor 
-is called, ultimately (as noted) the code flow simply assigns the object created at line 10 to the reference 
-called, <em>anInstance</em>, which is modeled on the default constructor of class A
-(i.e. the <em>reference</em> is, of <u><em>type</em> A</u>).
+No output is generated when the parent class default constructor, and (then) the subclass constructor 
+is called. However, the object created at line 10 explicitly references class A’s (obviously 
+<em>non-static</em>) default constructor (i.e. the <em>reference</em> is, of 
+<em><u>type</em> A</u>), which ensures that the value of the default constructor’s local variable 
+<em>n</em> is output via the println statement at line 11.
 <br>
 <br>
+The instance variable <em>n</em>, at line 8, is ordinarily associated with any class Test object 
+instance that is created — as long as that object is <em><u>not</u></em> created within a 
+static context (unlike the object instance <em>anInstance</em> is, in this example). 
+<br>
+<br>
+For example, since the reference, anInstance, is executed <em><u>within</u> static</em> method main 
+(which is the only method available in class Test), the variable n (at line 8) has no possible associations
+ -- i.e. if it were preceded by the word static, it would be 
+a class variable, and able to be referenced (at line 11) with - or without being preceded by the name of the class.
 <!--When the object reference is called by the <em>println</em> statement at line 11, -->
 <br>
 <br>
