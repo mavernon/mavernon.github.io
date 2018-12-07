@@ -31,7 +31,7 @@ if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
 <br>
 <h6>
 <div class="blue"><b>USING LOOP CONSTRUCTS</b>  <br>
-problem # &nbsp; 4.1</div>
+problem # &nbsp; 4.2</div>
 
 </h6>
 
@@ -42,15 +42,29 @@ problem # &nbsp; 4.1</div>
 <ol >
 <li><a class="a0">public class Test {</a> </li>
 <li><a class="a1">public static void main(String []args) {</a> </li>
-<li><a class="a2">int [][] a = {{10, 20}, {30, 40}};</a> </li>
-<li><a class="a2">int [] b = a[0];</a> </li>
-<li><a class="a2">a[0][0] = 50;</a> </li>
-<li><a class="a2">System.out.println(b[0]);</a> </li>
+<li><a class="a2">int i = 1;</a> </li>
+<li><a class="a2">int [][][] multiarray = {{{ 3,37,4,5,3},</a> </li>
+<li><a class="a3">{ 4,6,8,2,4}},
+<li><a class="a3">{{ 4,6,1},{ 9,23,15,6,8},{ 1,2}},</a> </li>
+<li><a class="a3">{{ 4,5,7},{ 5,57,6}}};</a> </li>
+<li><a class="a2">System.out.println(multiarray[i ++][i][0]);</a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
 
 </ol>
+<!--
 
+
+/*
+Line 4 creates three arrays-of-arrays. The second array contains three separate groups of array.
+The first group in the second array contains two arrays, the third group contains three arrays,
+and the third group in the second array contains two arrays.
+
+The println statement at line 5 interprets the value of the array element at index position
+[1][2][0] (correctly) as the value 1.
+
+ */ 
+ -->
 </div>
 
 <br>  
@@ -63,28 +77,23 @@ problem # &nbsp; 4.1</div>
 
 <div id="solution" class="hidden">
 <h2>
- A <em><b>two-dimensional array</b></em> (i.e. <em>an array - of an array</em>) 
- of type <em>int</em> is created at line 3. 
+ Line 4 creates three <em><b>arrays-of-arrays</b></em> (more commonly known as,
+  a single <em>three-dimensional</em> 
+ array).
+ <br>
+<br>
+  The second <em>nested</em> 
+ array (of the <em>three-dimensional</em> 
+ array) is composed of three separate groups of arrays.
+The first group of arrays, in the second array, contains two arrays; the second group of arrays, 
+in the second 
+array, contains three arrays; and the third group of arrays, in the second array, contains two arrays.
 <br>
 <br>
-At line 4, <em>the array at index position zero</em> of the two-dimensional array at line 3,
-is assigned to a reference – int array,<em> b</em>.
-<br>
-<br>
-The value <em>50</em> is assigned (at line 5) to replace the value of the first element 
-(<em>10</em>), that occurs in the first array 
-of the <em>two-dimensional array</em> that was 
-created at line 3. This modified value of the <em>first element</em>, is mirrored <u>in the 
-<em>reference</em></u>
-to that same array ( int [ ] <em>b</em>) which was created by the assignment at line 4. 
-
-<br>
-<br>
-By using the array reference as an argument, the output to the <em>println</em> statement at line 6
-confirms that the value assigned at line 5, simultaneously modifies both the first element 
-of the array reference, and the first element of the original multi-dimensional array 
-(created at line 3).
-
+The <em>println statement at line 5</em> interprets (and outputs) the argument that its provided as, 
+ the <span style="color: #0000CD"><em>array element</em> 
+located at index position [1][2][0], of the three-dimensional array</span>
+ – whose value is 1.
 
 <br>
 <br>
