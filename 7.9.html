@@ -64,32 +64,45 @@ problem # &nbsp; 7.9</div>
 <h2>
 In this example, class Test
 has <u>no</u> <em>explicit</em> constructor. So <em>a <u>default constructor</u></em> 
-(thats never visible in the code) <em>is automatically 
-provided</em>,  when the <em>new</em> keyword prompts the creation of Test object,  
+(that is never visible in the code) <em>is automatically 
+provided</em> by the compiler,  when the <em>new</em> keyword prompts the creation of Test object,  
 <em>anInstance</em>, at line 10.
 
 <br>
 <br>
-The presence of the (<em>invisible</em>) default constructor in class Test, causes it to be automatically 
-chained to the <em>default</em> constructor 
-of the parent class, A (i.e. the flow of code transitions from one constructor to the next) .
-No output is generated when the parent class default constructor, and (then) the subclass constructor 
-is called. However, the object created at line 10 explicitly references class A’s (obviously 
-<em>non-static</em>) default constructor (i.e. the <em>reference</em> is, of 
-<em><u>type</em> A</u>), which ensures that the value of the default constructor’s local variable 
-<em>n</em> is output via the println statement at line 11.
+
+Because class Test extends class A, constructor
+chaining occurs between the default
+constructors of class Test and class A – causing the flow of
+code to transition from the subclass to the super class (just prior to the new 
+Test object being instantiated at line 10).
+In this example however, nothing is output
+by either default constructor when the flow of code transitions from one to the other.
 <br>
 <br>
-The instance variable <em>n</em>, at line 8, is ordinarily associated with any class Test object 
+Finally, since the object created at line 10 explicitly
+references class A’s default
+constructor (i.e. the <em>reference</em> is, of type A), the value
+of the local variable <em>n</em>, located inside class A’s default
+constructor, is output via the println statement at line
+11. 
+
+<br>
+<br>
+Note that the instance variable <em>n</em>, at line 8, is ordinarily associated with any class Test object 
 instance that is created — as long as that object is <em><u>not</u></em> created within a 
-static context (unlike the object instance <em>anInstance</em> is, in this example). 
+<em><u>static</u></em> context (which is not the case for the object reference <em>anInstance,</em>
+ in this example). 
 <br>
 <br>
-For example, since the reference, anInstance, is executed <em><u>within</u> static</em> method main 
-(which is the only method available in class Test), the variable n (at line 8) has no possible associations
- -- i.e. if it were preceded by the word static, it would be 
-a class variable, and able to be referenced (at line 11) with - or without being preceded by the name of the class.
-<!--When the object reference is called by the <em>println</em> statement at line 11, -->
+In other words, since the reference, <em>anInstance</em>, is executed <em><u>within</u> static</em> method main,
+at line 10, 
+(which is the only method available in class Test), the variable <em>n</em> (at line 8) has no 
+logically possible associations.
+Note: If <em>n</em> were preceded by the word static, it would be 
+a class variable, and able to be referenced (at line 11) with - or without being preceded by 
+the name of the class.
+
 <br>
 <br>
 <br>
