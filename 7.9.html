@@ -63,21 +63,23 @@ problem # &nbsp; 7.9</div>
 <div id="solution" class="hidden">
 <h2>
 In this example, class Test
-has <u>no</u> <em>explicit</em> constructor. So <em>a <u>default constructor</u></em> 
-(that is never visible in the code) <em>is automatically 
-provided</em> by the compiler,  when the <em>new</em> keyword prompts the creation of Test object,  
-<em>anInstance</em>, at line 10.
+has <u>no</u> <em>explicit</em> constructor. So <em>
+<span style="color: #0000CD">a <u>default constructor</u></span></em> 
+(that is never visible in the code) <em><span style="color: #0000CD">is automatically 
+provided</span></em> by the compiler,  when the <em>new</em> keyword, 
+at line 10, prompts the creation of Test object reference,  
+<em>anInstance</em>.
 
 <br>
 <br>
 
-Because class Test extends class A, constructor
-chaining occurs between the default
-constructors of class Test and class A – causing the flow of
-code to transition from the subclass to the super class (just prior to the new 
+Since class Test extends class A (at line 7), <em><span style="color: #0000CD">constructor
+chaining</span></em> occurs between the (<em>invisible</em>) default
+constructor of class Test and the default constructor of class A – causing the flow of
+code to transition from the subclass to the super class, and then back to the subclass (just prior to the new 
 Test object being instantiated at line 10).
-In this example however, nothing is output
-by either default constructor when the flow of code transitions from one to the other.
+Note that in this example however, <em>nothing is output</em>
+by either default constructor during these transitions.
 <br>
 <br>
 Finally, since the object created at line 10 explicitly
