@@ -48,7 +48,7 @@ problem # &nbsp; 7.10</div>
 <li><a class="a2">A anInstance = new Test();</a> </li>
 <li><a class="a2">System.out.println(anInstance.number());</a> </li>
 <li><a class="a1">}</a> </li>
-<li><a class="a1">static int number</a> </li>
+<li><a class="a1">static int number() {</a> </li>
 <li><a class="a2">return n + 1;</a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
@@ -65,7 +65,8 @@ problem # &nbsp; 7.10</div>
 
 <div id="solution" class="hidden">
 <h2>
-When two <em><b><u>static</u></b> methods</em> have the same <em>method signature</em>, 
+When two <em><b><u>static</u></b> methods</em> have the same 
+<em>method signature</em> (at lines 3 and 13 for example), 
 <em><span style="color: #A52A2A">overriding</span></em> – 
 wherein the subclass method takes precedence –  
 does <em><u>not</u></em> occur (as
