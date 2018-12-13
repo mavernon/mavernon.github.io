@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>INHERITANCE</b>  <br>
+problem # &nbsp; 7.10</div>
+
+</h6>
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">class A { </a> </li>
+<li><a class="a1">static int n = 10;</a> </li>
+<li><a class="a1">static int number() {</a> </li>
+<li><a class="a2">return n;</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">} </a> </li>
+<li><a class="a0">public class Test extends A {</a> </li>
+<li><a class="a1">static int n = 15;</a> </li>
+<li><a class="a1">public static void main(String[] args){</a> </li>
+<li><a class="a2">A anInstance = new Test();</a> </li>
+<li><a class="a2">System.out.println(anInstance.number());</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">static int number</a> </li>
+<li><a class="a2">return n + 1;</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+
+</ol>
+
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+When two <em><b><u>static</u></b> methods</em> have the same <em>method signature</em>, 
+<em><span style="color: #A52A2A">overriding</span></em> – 
+wherein the subclass method takes precedence –  
+does <em><u>not</u></em> occur (as
+it does when instance methods have the same signature). Instead, the <em><u>static</u></em> method
+thats being <em><u>referenced</u></em> at that particular time, 
+is the method that takes precedence (e.g. the static method <em>number</em>, thats associated with the
+class A reference <em>anInstance</em>, at lines 10 and 11, takes precedence in this example).
+<br>
+<br>
+As a result, the solution to this code is the int value <em>10</em> (from line 2), thats output when the println 
+statement is invoked on line 11.
+
+<br>
+<br>
+<br>
+<br>
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>
