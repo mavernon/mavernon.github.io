@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>USING LOOP CONSTRUCTS</b>  <br>
+problem # &nbsp; 4.3</div>
+
+</h6>
+
+
+<div class="frame">
+
+
+<ol >
+<li><a class="a0">import java.util.ArrayList;</a> </li>
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a2">List < String > x </a> </li>
+<li><a class="a2">= new ArrayList < String >(); </a> </li>
+<li><a class="a3">x.add(" a");</a> </li>
+<li><a class="a3">x.add(" b");</a> </li>
+<li><a class="a3">x.add(" c");</a> </li>
+<li><a class="a2">List < String > y = new Test().list(x); </a> </li>
+<li><a class="a3">y.add(" x"); </a> </li>
+<li><a class="a3">System.out.println( y);</a> </li>
+<li><a class="a2">}</a> </li>
+<li><a class="a1">public List < String > list </a> </li>
+<li><a class="a1">(List < String > z) { </a> </li>
+<li><a class="a2">z.add(" y"); </a> </li>
+<li><a class="a2">return z; </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+
+</ol>
+<!--
+
+
+/*
+Line 4 creates three arrays-of-arrays. The second array contains three separate groups of array.
+The first group in the second array contains two arrays, the third group contains three arrays,
+and the third group in the second array contains two arrays.
+
+The println statement at line 5 interprets the value of the array element at index position
+[1][2][0] (correctly) as the value 1.
+
+ */ 
+ -->
+</div>
+
+<br>  
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+
+
+<div id="solution" class="hidden">
+<h2>
+After the new (type <em>String</em>) <b>ArrayList</b> reference "x" is created (at line 4),
+its modified three times (lines 6 thru 8) via the add method. Then, at line 9, a <em>new</em>
+Test object is created, and assigned to the List (type <em>String</em>) reference "y".
+<br>
+<br> 
+The class Test object thats created at line 9 simultaneously implements the (<em>native</em>)
+list interface (<em>defined at line 13</em>) – passing it a required reference 
+(e.g. the ArrayList 
+<em>reference</em> "x",
+created at line 4), in order to satisfy the argument requirement of the interface. 
+<br>
+<br>
+Implementing the interface at line 13 also includes modifying the provided <em>list</em>
+argument 
+("x"), by adding another String element (at line 15) to it, before returning the results to the
+calling object.
+<br>
+<br>
+Finally, when the  implementation code at line 13 completes, a final String element is added
+to the list (at line 10).
+
+<br>
+<br>
+<br>
+<br> 
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>
