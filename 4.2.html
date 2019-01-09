@@ -43,7 +43,7 @@ problem # &nbsp; 4.2</div>
 <li><a class="a0">public class Test {</a> </li>
 <li><a class="a1">public static void main(String []args) {</a> </li>
 <li><a class="a2">int i = 1;</a> </li>
-<li><a class="a2">int [][][] multiarray = {{{ 3,37,4,5,3},</a> </li>
+<li><a class="a2">int [][][] multiarray = {{{ 3,37,4,5,3},</a></li>
 <li><a class="a3">{ 4,6,8,2,4}},
 <li><a class="a3">{{ 4,6,1},{ 9,23,15,6,8},{ 1,2}},</a> </li>
 <li><a class="a3">{{ 4,5,7},{ 5,57,6}}};</a> </li>
@@ -77,24 +77,27 @@ The println statement at line 5 interprets the value of the array element at ind
 
 <div id="solution" class="hidden">
 <h2>
- Line 4 creates three <em><b>arrays-of-arrays</b></em> (more commonly known as,
-  a single <em>three-dimensional</em> 
- array).
- <br>
+ The statement at line 4 creates three <em><b>arrays-of-arrays</b></em> 
+ (...commonly referred to as,
+  a single <em>three-dimensional</em> array).
 <br>
-  The second (<em>nested</em>) 
+<br>
+  From a <em>visual</em> perspective, the second (<em>nested</em>) 
  array (of the <em>three-dimensional</em> 
- array) encapsulates three separate groups of arrays.
- These three separate groups, combined, <em>are</em> the third array of 
- the three-dimensional array (e.g. the first group of arrays, <em>that make up of the
+ array) contains three separate groups of arrays.
+ These three separate groups, combined, <u><em><b>are</b></em> the third array</u> of 
+ the three-dimensional array (e.g. the first group of arrays, <em>that make up the
  third array,</em> consists of two arrays – each of
- which contains 5 elements ...)
+ which contains exactly 5 elements ...)
 <br>
 <br>
-The <em>println statement at line 8</em> interprets (and outputs) the argument that its provided as, 
- the <span style="color: #0000CD"><em>array element</em> 
-located at index position [1][2][0], of the three-dimensional array.</span> The
-value of that array element is <em>1</em>.
+The <em>println statement argument</em>, at line 8, can be interpreted as, 
+<span style="color: #0000CD">"... output
+ the <em>array element</em> 
+located at index position [1][2][0], of the three-dimensional array".</span> 
+<br>
+<br>
+The value of the array element located at that index position, of the three-dimensional array, is <em>1</em>.
 
 <br>
 <br>
