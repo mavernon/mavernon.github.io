@@ -90,17 +90,19 @@ it is modified three times (lines 6 thru 8) via the add method. Then, at line 9,
 Test object is created, and assigned to the List (type <em>String</em>) reference "y".
 <br>
 <br> 
-The class Test object thats created at line 9 simultaneously implements the (<em>native</em>)
-list interface (<em>defined at line 13</em>) – passing it a required reference 
-(e.g. the ArrayList 
+The statement that creates the <em>new</em> Test object (at line 9), 
+includes <em>dot notation</em> that simultaneously invokes the object's <em>native</em>
+list interface (<em>defined at line 13</em>) – passing it the required reference 
+(i.e. the ArrayList 
 <em>reference</em> "x",
-created at line 4), in order to satisfy the argument requirement of the interface. 
+created at line 4), in order to satisfy the interface' parameter requirement. 
 <br>
 <br>
-Implementing the interface at line 13 also includes modifying the provided <em>list</em>
-argument 
-("x"), by adding another String element (at line 15) to it, before returning the results to the
-calling object.
+Implementing the interface at line 13, in this case, also <u>includes modifying the value of 
+the parameter reference thats
+provided to it</u> (i.e. via its parameter alias "z"), by adding another String element 
+(at line 15) to it, before returning the results of invoking the interface to the
+implementing object.
 <br>
 <br>
 Finally, when the  implementation code at line 13 completes, a final String element is added
