@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>USING LOOP CONSTRUCTS</b>  <br>
+problem # &nbsp; 4.4</div>
+
+</h6>
+
+
+<div class="frame">
+
+
+<ol >
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a2">int[] i1 = new int[ 5]; </a> </li>
+<li><a class="a2">Integer[] i2 = new Integer[ 5]; </a> </li>
+<li><a class="a2">if(i1[ 1] = = 0) System.out.print("a"); </a> </li>
+<li><a class="a2">if(i2[ 2] = = 0) System.out.print(" b");</a> </li>
+<li><a class="a2">System.out.print( i2[ i1[ 4]]); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+
+</ol>
+</div>
+
+<br>  
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+
+
+<div id="solution" class="hidden">
+<h2>
+The five members of <u><em>int</em></u> array i1, at line 3, all have the default value of 
+<em><b>zero</b></em>. 
+While the five members
+of the <u><em>Integer</em></u> array at line 4 all have the default value of 
+<em><b>null</b></em> 
+(since <em>Integer</em> is the <u><em>object</em></u> interpretation of <em>int</em> ).
+<br>
+<br>
+Accordingly, the code <u><em>compiles</em></u> successfully; it contains no type mismatch or syntactical errors.
+However, a logical error (i.e.  a NullPointerException) is thrown at <b><em>runtime</em></b>. 
+The reason that the runtime error is thrown is ...
+<br>
+<br>
+<br>
+<br> 
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>
