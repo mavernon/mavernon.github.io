@@ -72,8 +72,21 @@ of the <u><em>Integer</em></u> array at line 4 all have the default value of
 <br>
 <br>
 Accordingly, the code <u><em>compiles</em></u> successfully; it contains no type mismatch or syntactical errors.
-However, a logical error (i.e.  a NullPointerException) is thrown at <b><em>runtime</em></b>. 
-The reason that the runtime error is thrown is ...
+However, <u>a logical error (i.e.  a NullPointerException) is thrown at 
+<b><em>runtime</em></b></u>. 
+The reason that the runtime error is thrown is, when the second if statement (at line 7) executes,
+the logic attempts to compare a null value, to an int value. In other words, the program attempts
+to access an object (i.e. i2[2] ) that has no value – and compare it to an <em>int</em> (<em>
+primitive</em>) object that <em>does</em> have a value. This logic discrepancy is what causes
+the NullPointerException to be thrown at runtime.
+<br>
+<br>
+Note that, the java compiler - at compile time, doesn't have the ability to detect logic errors; 
+which means that, in this case, it is perfectly legitimate for i2[2] (at line 6) to have a null value,
+while the <em>int</em> to the right of it has the value of zero. However, what is 
+<u><em>not</u></em> legitimate, is to compare them – since <b>they represent two 
+incompatible object <em>types</em></b> 
+(<em>which again, the compiler is unable to discern</em>).
 <br>
 <br>
 <br>
