@@ -68,7 +68,24 @@ problem # &nbsp; 4.7</div>
 
 <div id="solution" class="hidden">
 <h2>
-
+After the new <em><b>ArrayList</b></em> (al) is created at line 4, and filled
+with three elements (lines 6 through 8), it invokes the <em>toArray</em> method
+(at line 10) with an empty Integer array (a) as a argument.
+<br>
+<br>
+Although the ArrayList (al) members are Integer type, and the Integer array (a)
+contains two <em>nulls</em> (by default), nothing occurs when the method toArray is invoked
+at line 10, since
+invoking a method is an action that simply preceds execution - but is not the act
+of execution itself (<em>in fact, the method invocation at line 10 could be considered 
+to be nothing more than a distractor - as it has no functional relevance in this example</em>).
+<br>
+<br>
+However, at line 11, when there is an attempt to execute an expression (e.g. the
+<em>for loop</em>) that references the Integer array (a), a <em><b>NullPointerException
+</b></em> is thrown -
+since <u>a null cannot be compared to an object that has a value</u> (which is what the
+for loop at line 11, in essence, attempts to do).
 <br>
 <br>
 <br>
