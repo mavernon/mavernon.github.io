@@ -59,6 +59,40 @@ problem # &nbsp; 7.11</div>
 
 <div id="solution" class="hidden">
 <h2>
+The <em><b>interface</b></em> constructor</em> (line 2) is an illegal construct. <u>Since interfaces cannot be instantiated,
+they similarly cannot have <em>constructors</em></u>. As a result, this code sample fails to compile 
+(e.g. it produces a compiler error).
+<br>
+<br>
+Interestingly, <span style="color: #A52A2A">the <em><u>abstract</u> class constructor</em> 
+(at line 5) <em><b>is</b></em> a legal construct –
+even though an <em>abstract class</em> (also) cannot be instantiated
+</span>. Specifically, the only way to invoke the 
+constructor of an <em>abstract class</em>, is to access it through a subclass (of the 
+ <em>abstract class</em>) <b>that can</b> be instantiated.
+ <br>
+<br>
+ In other words, if the interface constructor at line 2 were <em>removed</em>, and the code above resembled 
+ the sample code below, it would compile and execute without error 
+ (<em>to include, the execution of the <u>abstract constructor</u></em>).
+ <br>
+ <br>
+
+<ol >
+<li><a class="a0">﻿interface X {   </a> </li>
+<li><a class="a0">} </a> </li>
+<li><a class="a0">abstract class A implements X {  </a> </li>
+<li><a class="a1">A() { System.out.print("A"); } </a> </li>
+<li><a class="a0">} </a> </li>
+<li><a class="a0">class B extends A {  </a> </li>
+<li><a class="a0">} </a> </li>
+<li><a class="a0">public class Test extends A {</a> </li>
+<li><a class="a1">public static void main(String[] args){</a> </li>
+<li><a class="a2">new Test();</a> </li>
+<li><a class="a2">A b = new B();</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
 
 
 <br>
