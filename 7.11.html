@@ -59,17 +59,18 @@ problem # &nbsp; 7.11</div>
 
 <div id="solution" class="hidden">
 <h2>
-The <em><b>interface</b></em> constructor</em> (line 2) is an illegal construct. <u>Since interfaces cannot be instantiated,
-they similarly cannot have <em>constructors</em></u>. As a result, this code sample fails to compile 
+The <em><b>interface</b></em> constructor</em> (at line 2) is an <em>illegal</em>
+ construct. Since <u>interfaces cannot be instantiated</u>,
+<u>they similarly cannot have <em>constructors</em></u>. As a result, this code simply fails to compile 
 (e.g. it produces a compiler error).
 <br>
 <br>
 Interestingly, <span style="color: #A52A2A">the <em><u>abstract</u> class constructor</em> 
 (at line 5) <em><b>is</b></em> a legal construct –
 even though an <em>abstract class</em> (also) cannot be instantiated
-</span>. Specifically, the only way to invoke the 
-constructor of an <em>abstract class</em>, is to access it through a subclass (of the 
- <em>abstract class</em>) <b>that can</b> be instantiated.
+</span>. The difference is, the constructor of an <em>abstract class</em> can only be invoked 
+if its accessed through a <u>subclass</u> (of the 
+ <em>abstract class</em>) <b>– that <em>can</em></b> be instantiated.
  <br>
 <br>
  In other words, if the interface constructor at line 2 were <em>removed</em>, and the code above resembled 
