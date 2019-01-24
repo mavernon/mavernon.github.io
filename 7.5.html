@@ -78,36 +78,37 @@ When classes have an inheritance relationship, the flow of logic between them tr
 <em>constructor chaining</em>.
 <br>
 <br>
-<em><b>Constructor chaining</b></em> occurs <span style="color: #0000CD">when the default 
-constructor of a subclass, <em>references</em> the 
-default constructor of it's super class </span>. Alternatively, constructor chaining can occur if the 
-default constructor of a subclass includes a constructor reference that is <em>syntactically identical</em> 
-to a super class constructor (e.g. line 23).
+<em><b>Constructor chaining</b></em> occurs <span style="color: #0000CD">when 
+the keyword <em>super</em> is explicitly used as the first line in the body of a subclass (<em>as is 
+the case in this example</em> – at line 23), with or without parameters, to reference the 
+syntactically matching constructor of a super class. Alternately, constructor chaining also occurs 
+when a subclass constructor explicitly (or implicitly, if no other class constructor exists) <em>references</em> the default constructor 
+of it's super class</span> (this is what enables the constructor at line 16 to be chained to its 
+super class constructor at line 3).
 <br>
 <br>
-The example code above combines <em>constructor chaining</em> with <em><b>unboxing</b></em>, and 
-<em><b>casting</b></em>. 
+This code, in addition to <em>constructor chaining</em>, also includes 
+<em><b>unboxing</b></em> and <em><b>casting</b></em>. 
 <br>
 <br>
-The base class at 
-line 21 is chained to its super class at line 16, via the super class constructor reference at line 23 (<em>in this case, 
-</span><span style="color: #0000CD"><u>unboxing</u> from an Integer to a int type 
-occurs simultaneously</span></em>) . The constructor 
-at line 16 is then chained to its super class reference - the <em>default</em> constructor at line 3.
+As mentioned, the subclass at 
+line 21 is chained to its super class' constructor at line 16, via a reference to the super class 
+constructor reference at line 23;<em> in this case, 
+</span><span style="color: #0000CD"><b>unboxing</b> from an Integer to a int type 
+occurs simultaneously</span></em>. 
 
 <br>
 <br>
 Following the execution of the constructor at line 3, when the constructor at line 16 executes, 
-the <em>cast</em> that occurs (at line 17) converts the value of the argument supplied 
+the <em><b>cast</b></em> that occurs (at line 17) converts the value of the argument supplied 
 to the constructor – to an int.  
 <br>
 <br>
-<em>
-Note: When unboxing and chaining occur simultaneously at the very beginning of this example, 
-the reason that the constructor 
-at line 16 is able to accept an int type as an argument is
-because, </span><span style="color: #0000CD"><u>an int can be automatically converted to a 
-double without any mathematical loss of precision</u></span>.
+
+Note: Implicit conversion is what enables the constructor 
+at line 16 to accept an int type (<em>via the super constructor call</em>, at line 23) as an argument.
+In other words, <em></span><span style="color: #0000CD"><u>an int can be implicitly converted 
+to a double without any mathematical loss of precision</u></span>.
 </em>
 <br>
 <br>
