@@ -63,7 +63,16 @@ problem # &nbsp; 7.12</div>
 
 <div id="solution" class="hidden">
 <h2>
-
+Although <em>it seems counterintuitive</em>
+ that a class reference could be cast to an <em><b>interface</b></em> 
+(as implied at line 12), it is possible – <em>if the interface were related to the
+class by inheritance or implementation</em>. Therefore, 
+<u>no compiler error is thrown</u> as a result of this code syntax. 
+<br>
+<br>
+However, because there is no inheritance or implementation relationship between the class, and
+interface in this example, a legal cast does not exist (at line 12), which means that a <em><b><u> 
+ClassCastException</em></b> is thrown at runtime</u>.
 
 <br>
 <br>
