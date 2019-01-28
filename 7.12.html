@@ -65,15 +65,46 @@ problem # &nbsp; 7.12</div>
 <h2>
 Although <em>it seems counterintuitive</em>
  that a class reference could be cast to an <em><b>interface</b></em> 
-(as implied at line 12), it is possible – <em>if the interface were related to the
-class by inheritance or implementation</em>. Therefore, 
-<u>no compiler error is thrown</u> as a result of this code syntax. 
+(as implied at line 12), it is possible – if the interface were <em>related to the
+reference by inheritance or implementation</em>. The existence of that possibility, in this case,
+prevents a <u>compiler error</u> from being thrown in consideration of this code syntax. 
 <br>
 <br>
-However, because there is no inheritance or implementation relationship between the class, and
-interface in this example, a legal cast does not exist (at line 12), which means that a <em><b><u> 
-ClassCastException</em></b> is thrown at runtime</u>.
+Instead, the lack of an <em>inheritance</em> or <em>implementation</em> relationship between 
+the class, and
+interface in this example, means that a legal cast does <em>not</em> exist 
+(at line 12). This results in a 
+<em><b> 
+ClassCastException</em></b> being thrown <u>at runtime</u>.
+<br>
+<br>
+Below is an example (given a few modifications to this problem's original code) 
+that shows how <u>a class reference <em>could</em> be legally cast to an interface</u> –
+based on the circumstances described in the first paragraph.
+<br>
+<br>
+<ol >
+<li><a class="a0">﻿class X {   </a> </li>
+<li><a class="a1">private void print() {</a> </li>
+<li><a class="a2">System.out.println( "X"); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">} </a> </li>
+<li><a class="a0">﻿class T extends X  implements Y{   </a> </li>
+<li><a class="a1">public void print() {</a> </li>
+<li><a class="a2">System.out.println( "Y"); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">} </a> </li>
+<li><a class="a0">interface Y { </a> </li>
+<li><a class="a1">void print( );</a> </li>
+<li><a class="a0">}</a> </li>
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static void main(String[] args) {</a> </li>
+<li><a class="a2">X x = new T();</a> </li>
+<li><a class="a2">((Y)x).print();</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
 
+</ol>
 <br>
 <br>
 <br>
