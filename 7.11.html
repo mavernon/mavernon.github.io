@@ -76,10 +76,13 @@ if its accessed through a <u>subclass</u> (of the
 <br>
  In other words, if the interface constructor at line 2 were <em>removed</em>, and the code above resembled 
  the sample code below, it would compile and execute without error 
- (<em>to include, the execution of the <u>abstract constructor</u></em>).
- <span style="color: #2E8B57">Note: the output of the <em>sample code below</em> is "<b>AA</b>" 
- (i.e. the <em><u>abstract constructor</u></em> (at line 4) is invoked for both the 
- abstract class A – and it's subclass, B)</span>.
+ (<em>to include, the execution of the <u>abstract constructor</u></em> at line 5).
+ <br>
+<br>
+ <span style="color: #2E8B57">Note: in the 
+ <em>sample code below</em> the <em><b>subclass</b></em> (B) of 
+ the <em>abstract class</em> is invoked as a result of its 
+ inheritance relationship (at line 8) with the instantiated class (at line 10)</span>.
  <br>
  <br>
 
@@ -91,10 +94,9 @@ if its accessed through a <u>subclass</u> (of the
 <li><a class="a0">} </a> </li>
 <li><a class="a0">class B extends A {  </a> </li>
 <li><a class="a0">} </a> </li>
-<li><a class="a0">public class Test extends A {</a> </li>
+<li><a class="a0">public class Test extends B {</a> </li>
 <li><a class="a1">public static void main(String[] args){</a> </li>
 <li><a class="a2">new Test();</a> </li>
-<li><a class="a2">A b = new B();</a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
 
