@@ -59,7 +59,7 @@ problem # &nbsp; 7.11</div>
 
 <div id="solution" class="hidden">
 <h2>
-The <em><b>interface</b> constructor</em> (at line 2) is an <em>illegal</em>
+The <b>interface</b> <em>constructor</em> (at line 2) is an <em>illegal</em>
  construct. Since, in addition to the fact that <em>interfaces can't be instantiated</em>,
 <u>they similarly cannot have <em>constructors</em></u>. As a result, the code in this example 
 simply fails to compile 
@@ -77,11 +77,14 @@ if its accessed through a <u>subclass</u> (of the
  In other words, if the interface constructor at line 2 were <em>removed</em>, and the code above resembled 
  the sample code below, it would compile and execute without error 
  (<em>to include, the execution of the <u>abstract constructor</u></em>).
+ <span style="color: #2E8B57">Note: the output of the <em>sample code below</em> is "<b>AA</b>" 
+ (i.e. the <em><u>abstract constructor</u></em> (at line 4) is invoked for both the 
+ abstract class A – and it's subclass, B)</span>.
  <br>
  <br>
 
 <ol >
-<li><a class="a0">﻿interface X {   </a> </li>
+<li><a class="a0">interface X {   </a> </li>
 <li><a class="a0">} </a> </li>
 <li><a class="a0">abstract class A implements X {  </a> </li>
 <li><a class="a1">A() { System.out.print("A"); } </a> </li>
@@ -94,6 +97,7 @@ if its accessed through a <u>subclass</u> (of the
 <li><a class="a2">A b = new B();</a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
+
 </ol>
 
 
