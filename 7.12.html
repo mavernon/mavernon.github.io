@@ -65,22 +65,23 @@ problem # &nbsp; 7.12</div>
 <h2>
 Although <em>it seems counterintuitive</em>
  that a class reference could be cast to an <em><b>interface</b></em> 
-(as implied at line 12), it is possible – if the interface were <em>related to the
-reference by inheritance or implementation</em>. The existence of that possibility
-prevents a <u>compiler error</u> from being thrown, in this case. 
+(as implied at line 12), it is possible – <em>if</em> the interface is <em>related to the
+reference by inheritance or implementation</em>. The mere existence of that possibility
+prevents a <u>compiler error</u> from being thrown, in this example. 
 <br>
 <br>
-Instead, the lack of an <em>inheritance</em> or <em>implementation</em> relationship between 
-the class, and
-interface in this example, means that a legal cast does <em>not</em> exist 
-(at line 12). This results in a 
+However, the literal lack of an <em>inheritance</em> or <em>implementation</em> relationship 
+between 
+the class, and the
+interface in this example, means that an <em>applicable</em> cast does <em>not</em> exist 
+(at line 12) and, as a result, a 
 <em><b> 
-ClassCastException</em></b> being thrown <u>at runtime</u>.
+ClassCastException</em></b> is thrown <u>at runtime</u>.
 <br>
 <br>
 Below is an example (given a few modifications to this problem's original code) 
-that shows how <u>a class reference <em>could</em> be legally cast to an interface</u> –
-based on the circumstances described in the first paragraph.
+that shows how <u>a class reference <em>could</em> be legally cast to an interface</u> (e.g.
+<em>through inheritance or implementation</em>).
 <br>
 <br>
 <ol >
