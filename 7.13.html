@@ -67,7 +67,19 @@ problem # &nbsp; 7.13</div>
 
 <div id="solution" class="hidden">
 <h2>
-
+The object reference <em>t</em>, <em><u>invokes its own method</u></em> print at line 14 
+– since its super class contains an identical method 
+(i.e. <b>method <em>overriding</em></b> occurs). When the (<em>subclass</em>) 
+object reference invokes it’s method 
+print however, it’s method print (at lines 16 and 17) calls the super class method print.
+<br>
+<br>
+The println statement, contained in the super class method print, calls the
+ <em>object reference</em> <em>s</em> – via the keyword <em><b>this</b></em> and, 
+ since the keyword <span style="color: #A52A2A"><em><b>this</b></em> always refers to the 
+ object that currently calls it</span>, 
+ the value of the reference <em>s</em> thats associated with the <em>super</em> class 
+ (at line 2) is returned. This results in the output “<em>hello</em>” when the code is run.
 
 <br>
 <br>
