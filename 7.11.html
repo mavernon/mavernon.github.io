@@ -60,7 +60,7 @@ problem # &nbsp; 7.11</div>
 <div id="solution" class="hidden">
 <h2>
 The <b>interface</b> <em>constructor</em> (at line 2) is an <em>illegal</em>
- construct. Since, in addition to the fact that <em>interfaces can't be instantiated</em>,
+ construct. The reason for this is, in addition to the fact that <em>interfaces can't be instantiated</em>,
 <u>they similarly cannot have <em>constructors</em></u>. As a result, the code in this example 
 simply fails to compile 
 (e.g. it produces a compiler error).
@@ -74,15 +74,16 @@ if its accessed through a <u>subclass</u> (of the
  <em>abstract class</em>) <b>– that <em>can</em></b> be instantiated.
  <br>
 <br>
- In other words, if the interface constructor at line 2 were <em>removed</em>, and the code above resembled 
- the sample code below, it would compile and execute without error 
+ In other words, if the interface constructor at line 2 were <em>removed</em>, and the code above 
+ mirrored 
+ the sample code at the bottom of this page, it would compile and execute without error 
  (<em>to include, the execution of the <u>abstract constructor</u></em> at line 5).
  <br>
 <br>
- <span style="color: #2E8B57">Note: in the 
- <em>sample code below</em> the <em><b>subclass</b></em> (B) of 
- the <em>abstract class</em> is called as a result of its 
- inheritance relationship (at line 8) with the instantiated class (at line 10)</span>.
+ <span style="color: #2E8B57">Note: In the 
+ <em>sample code below</em>, class <b>B</b> (the <em>subclass</em> of 
+ <em>abstract class</em> <b>A</b>) <u><em>is instantiated</em></u> as a result of its 
+ inheritance relationship (at line 8) with class Test – when class Test is instantiated at line 10</span>.
  <br>
  <br>
 
