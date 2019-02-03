@@ -69,9 +69,10 @@ problem # &nbsp; 7.13</div>
 <h2>
 The object reference <em>t</em>, <em><u>invokes its own method</u></em> print at line 14 
 – since its super class contains an identical method 
-(i.e. <b>method <em>overriding</em></b> occurs). When the (<em>subclass</em>) 
-object reference <em>t</em> invokes it’s method 
-print however, it’s method print (at lines 16 and 17) calls the super class method print.
+(i.e. <b>method <em>overriding</em></b> occurs). When the <em>subclass</em> 
+reference <em>t</em> does this however, it’s method print 
+calls the <em>super</em> class method print
+(via the use of the keyword <em>super</em>, at lines 16 and 17). 
 <br>
 <br>
 The println statement, contained in the super class method print, calls the
