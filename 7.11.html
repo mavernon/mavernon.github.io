@@ -76,14 +76,17 @@ if its accessed through a <u>subclass</u> (of the
 <br>
  In other words, if the interface constructor at line 2 were <em>removed</em>, and the code above 
  mirrored 
- the sample code at the bottom of this page, it would compile and execute without error 
+ the sample code that follows, at the bottom of this page, it would compile and execute without error 
  (<em>to include, the execution of the <u>abstract constructor</u></em> at line 5).
  <br>
 <br>
- <span style="color: #2E8B57">Note: In the 
+ Note: In the 
  <em>sample code below</em>, class <b>B</b> (the <em>subclass</em> of 
  <em>abstract class</em> <b>A</b>) <u><em>is instantiated</em></u> as a result of its 
- inheritance relationship (at line 8) with class Test – when class Test is instantiated at line 10</span>.
+ inheritance relationship (at line 8) with class Test – when class Test is instantiated at line 10.
+ Therefore, when class Test is instantiated, class <b>B</b>, (through <em>inheritance</em>) 
+ automatically invokes the constructor of the <em>abstract class</em> <b>A</b> (located at
+ line 4).
  <br>
  <br>
 
