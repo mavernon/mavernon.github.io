@@ -72,10 +72,11 @@ The reason for this is, in order to <em><u>catch</u></em> something (as implied 
 
 In other words, <span style="color: #A52A2A">the <em><b>catch</b></em> statement at line 7
 implies that <em>IOException has the potential to be thrown</em> - at some point, in the <em><b>try</b></em>
-clause.</span> The <em>try</em> clause however, doesn't contain any code that supports this.  
+clause (that starts at line 5).</span> The <em>try</em> clause however, doesn't 
+contain any code that supports this.  
 <br>
 <br>
-<u>In order for this code to compile</u>, the <em>try</em> clause (beginning 
+<u>Instead, in order for this code to compile</u>, the <em>try</em> clause (beginning 
 at some point after the left curly brace at line 5) would have to contain the
 statement: <br> <span style="color: #2E8B57"><b>throw new IOException("new IOException");
 </b></span>
