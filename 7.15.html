@@ -43,12 +43,20 @@ problem # &nbsp; 7.15</div>
 <li><a class="a1">SuperClass(int i, int ii) {</a> </li>
 <li><a class="a2">this(i * ii); </a> </li>
 <li><a class="a3">}</a> </li>
-<li><a class="a1">SuperClass(int i) { System.out.print(i); }</a> </li>
+<li><a class="a1">SuperClass(int i) { 
+<li><a class="a2">System.out.print(i); 
+<li><a class="a3">}</a> </li>
 <li><a class="a0">}</a> </li>
 <li><a class="a0">class BaseClass extends SuperClass {</a> </li>
-<li><a class="a1">BaseClass() {super(5); }</a> </li>
-<li><a class="a1">BaseClass(int i, int ii) {this(i * ii * 10); }</a> </li>
-<li><a class="a1">BaseClass(int i) { System.out.print(i); }</a> </li>
+<li><a class="a1">BaseClass() {
+<li><a class="a2">super(5); 
+<li><a class="a3">}</a> </li>
+<li><a class="a1">BaseClass(int i, int ii) {
+<li><a class="a2">this(i * ii * 10); 
+<li><a class="a3">}</a> </li>
+<li><a class="a1">BaseClass(int i) { 
+<li><a class="a2">System.out.print(i); 
+<li><a class="a3">}</a> </li>
 <li><a class="a0">}</a> </li>
 <li><a class="a0">public class Test {</a> </li>
 <li><a class="a1">public static void main(String[] args) {</a> </li>
@@ -67,8 +75,35 @@ problem # &nbsp; 7.15</div>
 
 <div id="solution" class="hidden">
 <h2>
+The solution to this problem includes multiple examples of 
+<em><b>constructor chaining</b></em></span>, including via the use of the 
+keywords <em><b><u>this</u></b></em> and <em><b><u>super</u></b></em>.
 
-
+<br>
+<br>
+As a result of the inheritance relationship at line 12, <span style="color: #A52A2A">the instantiation of the 
+ new class <em>object</em> at line 25 causes <em>constructor chaining to automatically occur</span> –
+</em> from the target constructor (at line 16), to the last constructor call 
+in the <em>chained hierarchy</em> (which in this case, is the parameterized constructor at line 8) –
+and back again (to the target constructor).
+<br>
+<br>
+<span style="color: #A52A2A">
+<em><u>The actual assignment of values</u></em> to the <em>instantiated object</em>, </span>
+via the 
+<em>constructors</em> in this program, <u>occurs chronologically</u> – as the code flow begins its descent 
+from the top of the <em>constructor chain</em> (i.e. when the last constructor call 
+in the <em>chained hierarchy</em> is initialized) at line 8.
+<br>
+<br>
+The <u>keyword <em><b>this</b></em></u> invokes a call to a constructor in the same class - that contains an
+argument that matches the <em>this</em> statement parameter. Similarly, 
+the <u>keyword <em><b>super</b></em></u>
+invokes a call to a super class constructor that contains an
+argument matching the subclass' <em>super</em> statement parameter.
+<br>
+<br>
+The final output to this solution is <em>18200</em>.
 <br>
 <br>
 <br>
