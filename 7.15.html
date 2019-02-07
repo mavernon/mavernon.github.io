@@ -88,19 +88,20 @@ in the <em>chained hierarchy</em> (which in this case, is the parameterized cons
 and back again (to the target constructor).
 <br>
 <br>
+The <u>keyword <em><b>this</b></em></u> (e.g. at line 17) invokes a call to a constructor in the same class - 
+where that constructor has a parameter
+ that matches the <em>this</em> statement's argument value. Similarly, 
+the <u>keyword <em><b>super</b></em></u>
+invokes a call to a super class constructor that containing a
+parameter matching the subclass' <em>super</em> statement argument.
+<br>
+<br>
 <span style="color: #A52A2A">
 <em><u>The actual assignment of values</u></em> to the <em>instantiated object</em>, </span>
 via the 
 <em>constructors</em> in this program, <u>occurs chronologically</u> – as the code flow begins its descent 
 from the top of the <em>constructor chain</em> (i.e. when the last constructor call 
 in the <em>chained hierarchy</em> is initialized) at line 8.
-<br>
-<br>
-The <u>keyword <em><b>this</b></em></u> invokes a call to a constructor in the same class - that contains an
-argument that matches the <em>this</em> statement parameter. Similarly, 
-the <u>keyword <em><b>super</b></em></u>
-invokes a call to a super class constructor that contains an
-argument matching the subclass' <em>super</em> statement parameter.
 <br>
 <br>
 The final output to this solution is <em>18200</em>.
