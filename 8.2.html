@@ -62,14 +62,14 @@ problem # &nbsp; 8.2</div>
 <div id="solution" class="hidden">
 <h2>
 Including a <em><b>throws</b></em> clause in a method does <em>not</em> mean that an exception
-<em> must be thrown</em>. Instead, the <em>throws</em> clause is included to simply <u>warn that
-<em>its possible</em></u> that executing the code will cause the specified exception to be thrown.
-For this reason, including the throws clause at line 3 has no adverse impact on this code (even though
+<em> must be thrown</em>. Instead, the <em>throws</em> clause is included to simply warn that
+<u><em>its possible</em></u> that executing the code will cause the specified exception to be thrown.
+For this reason, including the throws clause at line 3 to method <em>main</em> has no adverse impact on this code (even though
 the exception specified in the <em>throws</em> clause is <em>not</em> actually thrown).
 <br>
 <br>
 What <em>does</em> occur in this example is – a runtime error is thrown when the code is run. 
-Specifically, <span style="color: #A52A2A"><em>although this code will compile</em>, an 
+Specifically, <span style="color: #A52A2A"><em>although <u>this code will compile</u></em>, an 
 <b>ArithmeticException</b> is thrown at runtime</span>, as a result of the
 attempt to divide by zero - at line 5.
 
