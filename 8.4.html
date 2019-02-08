@@ -31,7 +31,7 @@ if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
 <br>
 <h6>
 <div class="blue"><b>HANDLING EXCEPTIONS</b>  <br>
-problem # &nbsp; 8.1</div>
+problem # &nbsp; 8.4</div>
 
 </h6>
 
@@ -40,15 +40,24 @@ problem # &nbsp; 8.1</div>
 
 
 <ol >
-<li><a class="a0">import java.io.IOException;</a> </li>
 <li><a class="a0">public class Test {</a> </li>
 <li><a class="a1">public static void main(String []args) {</a> </li>
-<li><a class="a2">int[] array = {1, 2, 3, 4};</a> </li>
+<li><a class="a2">int count = 0;</a> </li>
+<li><a class="a2">Integer i = null; </a> </li>
 <li><a class="a2">try {</a> </li>
-<li><a class="a3">System.out.println(array[4]); </a> </li>
-<li><a class="a2">} catch (IOException e) { </a> </li>
-<li><a class="a3">System.out.println("Printing error"); </a> </li>
-<li><a class="a2">}  </a> </li>
+<li><a class="a3">count  += 1; </a> </li>
+<li><a class="a3">throw new Exception(); </a> </li>
+<li><a class="a2">} catch (Exception e) {</a> </li>
+<li><a class="a3">count  += 2; </a> </li>
+<li><a class="a2">}</a> </li>
+<li><a class="a2">finally { </a> </li>
+<li><a class="a3">new RuntimeException(); </a> </li>
+<li><a class="a2">}  finally { </a> </li>
+<li><a class="a3">count  += 3; </a> </li>
+<li><a class="a3">count  += i; </a> </li>
+<li><a class="a3">count  += 4; </a> </li>
+<li><a class="a2">}</a> </li>
+<li><a class="a2">System.out.println(instance.number()); </a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
 </ol>
@@ -64,29 +73,10 @@ problem # &nbsp; 8.1</div>
 
 <div id="solution" class="hidden">
 <h2>
-This code will <em><u>not</u> compile</em>.
-<br>
-<br>
-The reason for this is, in order to <em><u>catch</u></em> something (as implied by the 
-<em><b>catch</b></em> keyword at line 7), something has to be thrown! 
 
-In other words, <span style="color: #A52A2A">the <em><b>catch</b></em> statement at line 7
-implies that <em>IOException has the potential to be thrown</em> - at some point, in the <em><b>try</b></em>
-clause (that starts at line 5).</span> The <em>try</em> clause however, doesn't 
-contain any code that supports this.  
-<br>
-<br>
-<u>Instead, in order for this code to compile</u>, the <em>try</em> clause (beginning 
-at some point after the left curly brace at line 5) would have to contain the
-statement: <br> <span style="color: #2E8B57"><b>throw new IOException("new IOException");
-</b></span>
-<br>
-<br>
-However, while adding the required statement to the <em>try</em> clause would
-enable this code to compile, the code would still fail to <em><u>fully</u></em> execute. 
-Instead, an <b>ArrayIndexOutOfBoundsException</b>, as a result of the call at line 6 to display an 
-element at an index location that is beyond the
-size (capacity) of the array, would be thrown at runtime.
+
+
+
 <br>
 <br>
 <br>
