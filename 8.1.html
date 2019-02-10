@@ -76,17 +76,20 @@ clause (that starts at line 5).</span> The <em>try</em> clause however, doesn't
 contain any code that supports this.  
 <br>
 <br>
-<u>Instead, in order for this code to compile</u>, the <em>try</em> clause (beginning 
-at some point after the left curly brace at line 5) would have to contain the
-statement: <br> <span style="color: #2E8B57"><b>throw new IOException("new IOException");
-</b></span>
+<u>Instead, in order for this code to compile</u>, the <em>try</em> clause would have to contain the
+statement, <span style="color: #2E8B57"><b>throw new IOException("new IOException");
+</b></span> (beginning at some point after the left curly brace on line 5). 
 <br>
 <br>
-However, while adding the required statement to the <em>try</em> clause would
+Alternatively, the code would compile if the declaration of method <em>main</em> (at line 3) included the words 
+<span style="color: #2E8B57"><b>throws IOException</b></span>, before the first curly brace.
+<br>
+<br>
+In any case, although adding the required statement to the <em>try</em> clause would
 enable this code to compile, the code would still fail to <em><u>fully</u></em> execute. 
-Instead, an <b>ArrayIndexOutOfBoundsException</b>, as a result of the call at line 6 to display an 
-element at an index location that is beyond the
-size (capacity) of the array, would be thrown at runtime.
+Instead, an <b><em>ArrayIndexOutOfBoundsException</em></b> would be thrown at runtime – as a result 
+of the call at line 6, to display an element at an index location that is beyond the
+size (capacity) of the array. 
 <br>
 <br>
 <br>
