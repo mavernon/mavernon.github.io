@@ -45,7 +45,7 @@ problem # &nbsp; 8.3</div>
 <li><a class="a2">Test instance = new Test();</a> </li>
 <li><a class="a2">System.out.println(instance.number()); </a> </li>
 <li><a class="a1">}</a> </li>
-<li><a class="a1">private int number()</a> </li>
+<li><a class="a1">private int number() {</a> </li>
 <li><a class="a2">try { </a> </li>
 <li><a class="a3">new RuntimeException(); </a> </li>
 <li><a class="a2">}  finally { </a> </li>
@@ -66,7 +66,21 @@ problem # &nbsp; 8.3</div>
 
 <div id="solution" class="hidden">
 <h2>
-
+The call (at line 4) by the Test object <em>instance</em>, to method <em>number</em> (declared at line 6) causes
+a <span style="color: #A52A2A"><b><em>RuntimeException</em></b> object</span> 
+to be instantiated, at line 8 (<em>note: instantiation simply creates an
+initial allocation of space in memory – for the new object</em>). However, no reference variable is declared, in
+association with the <em>RuntimeException</em> object, so the object is generally inert.
+<br>
+<br>
+Meanwhile, the method's <em>return statement</em> (at line 10), because its located inside 
+a <b><em>finally</em></b> block</span> - and
+<em>finally</em> blocks <em><u>always</u></em> execute (with one noted exception), returns the
+<em>int</em> <b>1</b> to the method call at line 4 (i.e. the <em>argument</em> of the <em>println</em> statement).
+<br>
+<br>
+The only time that a <u>finally block will <em>not</em> execute</u> is, if it is preceded by the statement:
+<b>System.exit(0);</b>
 
 
 
