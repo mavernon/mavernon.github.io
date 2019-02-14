@@ -51,13 +51,11 @@ problem # &nbsp; 8.4</div>
 <li><a class="a3">count  += 2; </a> </li>
 <li><a class="a2">}</a> </li>
 <li><a class="a2">finally { </a> </li>
-<li><a class="a3">new RuntimeException(); </a> </li>
-<li><a class="a2">}  finally { </a> </li>
 <li><a class="a3">count  += 3; </a> </li>
 <li><a class="a3">count  += i; </a> </li>
 <li><a class="a3">count  += 4; </a> </li>
 <li><a class="a2">}</a> </li>
-<li><a class="a2">System.out.println(instance.number()); </a> </li>
+<li><a class="a2">System.out.println(count); </a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
 </ol>
@@ -69,11 +67,18 @@ problem # &nbsp; 8.4</div>
 <a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
 </h9>
 
-
-
 <div id="solution" class="hidden">
 <h2>
-
+Although the <em><b>finally</b></em> block will always execute ( ...with one exception – see 
+example problem # 8.3),
+<span style="color: #A52A2A">the code thats associated with a <em>finally</em> block may <em><u>not</u></em>
+always run to completion</span>.
+<br>
+<br>
+This point is illustrated in this example where, at line 13, the <em>Integer</em> variable <b>i</b>
+causes a <em><b>NullPointerException</b></em> to be thrown as a result of an attempt to utilize the variable in
+an expression (while its identified as <b><em>null</em></b>) without first initializing it to an 
+actual <em>value</em>.
 
 
 
