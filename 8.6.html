@@ -81,7 +81,11 @@ The restriction to using this syntactical approach is, the <b>exceptions that ar
  <em><u>cannot</u> be related by <u>inheritance</u></em></b>.
 As a result, since <em>ArithmeticException</em> (at line 10) is a subclass of <em>RuntimeException</em>
 (at line 11), a <em><u>compiler error</u></em> is thrown at line 10 when an attempt is made to execute this code.
-
+<br>
+<br>
+Note: The compiler error notwithstanding, the appropriate exception thrown when this code executes is 
+<em><b>ClassCastException</b></em>, since the Long reference (<b>i</b>) at line 4 cannot be cast to an 
+Integer (at line 5). 
 <br>
 <br>
 <br>
