@@ -31,7 +31,7 @@ if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
 <br>
 <h6>
 <div class="blue"><b>HANDLING EXCEPTIONS</b>  <br>
-problem # &nbsp; 8.6</div>
+problem # &nbsp; 8.3</div>
 
 </h6>
 
@@ -42,16 +42,14 @@ problem # &nbsp; 8.6</div>
 <ol >
 <li><a class="a0">public class Test {</a> </li>
 <li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a2">Test instance = new Test();</a> </li>
+<li><a class="a2">System.out.println(instance.number()); </a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a1">private int number()</a> </li>
 <li><a class="a2">try { </a> </li>
-<li><a class="a3">Object i = new Long(0); </a> </li>
-<li><a class="a3">int total = 100/(Integer) i; </a> </li>
-<li><a class="a3">System.out.println(total); </a> </li>
-<li><a class="a2">} catch(ClassCastException | </a> </li>
-<li><a class="a2">IllegalArgumentException e) {</a> </li>
-<li><a class="a3">System.out.println("Exception 1"); </a> </li>
-<li><a class="a2">} catch(ArithmeticException | </a> </li>
-<li><a class="a2">RuntimeException e) {</a> </li>
-<li><a class="a3">System.out.println("Exception 2");</a> </li>
+<li><a class="a3">new RuntimeException(); </a> </li>
+<li><a class="a2">}  finally { </a> </li>
+<li><a class="a3">return 1; </a> </li>
 <li><a class="a2">}</a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
@@ -68,23 +66,10 @@ problem # &nbsp; 8.6</div>
 
 <div id="solution" class="hidden">
 <h2>
-The "<b>|</b>" symbol, that separates the two exceptions 
-at line 7 and the two exceptions at line 10 is, in this case, 
-<u>not</u> a <em>bit-wise</em> operator. 
-But instead, nothing more than a text separator, whose use (since its inclusion in Java 7) is meant solely as 
-a short-cut  that <span style="color: #A52A2A"><em>eliminates the need to write separate 
-catch statements</span> for each exception</em> in a <em><b>try-catch</b></em> block.
-<br>
-<br>
-A restriction to using this syntax is, the <b>exceptions that are separated by this symbol
- <em><u>cannot</u> be related by <u>inheritance</u></em></b>.
-As a result, since <em>ArithmeticException</em> (at line 10) is a subclass of <em>RuntimeException</em>
-(at line 11), a <em><u>compiler error</u></em> is thrown at line 10 when an attempt is made to execute this code.
-<br>
-<br>
-Note: The compiler error notwithstanding, the appropriate exception thrown when this code executes is 
-<em><b>ClassCastException</b></em>, since the Long reference (<b>i</b>) at line 4 cannot be cast to an 
-Integer (at line 5). 
+
+
+
+
 <br>
 <br>
 <br>
