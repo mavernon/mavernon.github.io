@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>HANDLING EXCEPTIONS</b>  <br>
+problem # &nbsp; 8.5</div>
+
+</h6>
+
+
+<div class="frame">
+
+
+<ol >
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
+<li><a class="a2">try { </a> </li>
+<li><a class="a3">int i = 10/0; </a> </li>
+<li><a class="a3">System.out.println("try block statement"); </a> </li>
+<li><a class="a2">} catch(ArithmeticException ae) {</a> </li>
+<li><a class="a3">System.out.println("catch block statement"); </a> </li>
+<li><a class="a3">return; </a> </li>
+<li><a class="a2">} finally {</a> </li>
+<li><a class="a3">System.out.println("finally block statement");</a> </li>
+<li><a class="a2">}</a> </li>
+<li><a class="a2">System.out.println("outside statement");</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
+</div>
+
+<br>  
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+
+
+<div id="solution" class="hidden">
+<h2>
+An exception is thrown (due to an attempt to divide by zero, at line 4) and caught by
+the <em><b>catch</b></em> block (at line 6) – which causes any code inside of the 
+<em>catch</em> to execute before the code flow is then routed to the <em><b>finally</b></em>
+ block.
+<br>
+<br>
+Because the <em>finally</em> block always executes, any code inside of the <em>finally</em>,
+(i.e. the statement at line 10), like the code inside of the <em>catch</em> block, also
+runs. After the <em>finally</em> block executes, (in this case) the flow of the code moves to 
+the <em><u>return</u> statement</em>
+, at line 8, where its routed back to the calling method and then terminates.
+<br>
+<br>
+The result of this is that, the code statement at line 12, does not execute.
+<br>
+<br> 
+Interestingly, inserting a <em>return statement</em> inside of the <em>finally</em> block,
+would make it <em><u>impossible</u></em> for the code at line 12 to <em><u>ever</u></em> 
+run – resulting in a compiler error (i.e. <em><b>unreachable statement</b></em>). 
+<br>
+<br> 
+In other words, as currently written (even though the return statement at line 8 routes
+the code flow back to the calling method) it is <em>possible</em> to include code that subsequently routes
+to, and executes the statement at line 12 – after the code returns to the calling method. For this reason, no 
+compiler error occurs in this example,
+even though the statement at line 12 never executes (i.e. it IS <em>reachable</em>).
+
+
+<br>
+<br>
+<br>
+<br> 
+<h7><script type="text/javascript" src="Last.js"></script></h7>
+</h2>
+</div>
+
+<h2>
+<a href="index.htm" >Home</a>
+</h2>
+<br>
+<br>
+
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>
