@@ -70,33 +70,35 @@ problem # &nbsp; 8.5</div>
 An exception is thrown (due to an attempt to divide by zero, at line 4) and caught by
 the <em><b>catch</b></em> block (at line 6) – causing any code inside of the 
 <em>catch</em> to execute - before the code flow is then routed to the <em><b>finally</b></em>
- block.
+ block (at line 9).
 <br>
 <br>
-Since the <em>finally</em> block <em>always</em> executes, any code inside of the <em>finally</em>,
-(i.e. the statement at line 10), like the code inside of the <em>catch</em> block, also
-runs. After the code in the <em>finally</em> block completes it's execution, 
-(in this case) the flow of the code moves to 
+Since the <em>finally</em> block <em>always</em> executes, any code inside of the <em>finally</em>
+(i.e. the statement at line 10), similar to the code inside of the <em>catch</em> block, also
+runs. After the code in the <em>finally</em> block completes, 
+(in this case) the flow of the code is transfered to 
 the <em><u>return</u> statement</em>
-- at line 8, where its routed back to the calling method and then terminates.
+at line 8 – inside of the <em>catch</em>, where it then gets routed back to the calling method
+ (<em>main</em>) before terminating.
 <br>
 <br>
-The result of this is that, the code statement at line 12, does not execute.
+Consequently, the result of the code flow in this example is that, neither the code statement 
+at line 4 – or at line 12 executes.
 <br>
 <br> 
-Interestingly, inserting a <em>return statement</em> inside of the <em>finally</em> block,
+Interestingly, <span style="color: #0000CD">inserting a <em>return statement</em> 
+inside of the <em>finally</em></span> block,
 would make it <em><u>impossible</u></em> for the code at line 12 to <em><u>ever</u></em> 
 run – resulting in an
 <span style="color: #0000CD"><em><b>unreachable statement</b></em></span>  compiler error.  
 <br>
 <br> 
-Conversely, as currently written, it's entirely <em><u>possible</u></em> to add 
+On the other hand, as currently written, it's entirely <em><u>possible</u></em> to add 
 <em>additional</em> 
 code to this example, that causes the statement at line 12 to execute
 – even after the code flow returns to the calling method. 
 For this reason, no <em>unreachable statement</em> compiler error is thrown in this example,  
-even while the statement at line 12 never does execute (i.e. because 
-it <b>is</b> still <em>reachable</em>).
+even though the statement at line 12 (and 4) never executes, since the statement is <em>still reachable</em>.
 
 
 <br>
