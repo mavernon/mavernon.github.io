@@ -69,16 +69,16 @@ problem # &nbsp; 8.5</div>
 <h2>
 An exception is thrown (due to an attempt to divide by zero, at line 4) and caught by
 the <em><b>catch</b></em> block (at line 6) – causing any code inside of the 
-<em>catch</em> to execute - before the code flow is then routed to the <em><b>finally</b></em>
+<em>catch</em>, <u>except for the <em>return statement</em></u>, 
+to execute - before the code flow is then routed to the <em><b>finally</b></em>
  block (at line 9).
 <br>
 <br>
 Since the <em>finally</em> block <em>always</em> executes, any code inside of the <em>finally</em>
 (i.e. the statement at line 10), similar to the code inside of the <em>catch</em> block, also
-runs. After the code in the <em>finally</em> block completes, 
-(in this case) the flow of the code is transfered to 
-the <em><u>return</u> statement</em>
-at line 8 – inside of the <em>catch</em>, where it then gets routed back to the calling method
+runs. After the code in the <em>finally</em> block completes, the flow of the code is <em>then</em> transfered to 
+the <em><u>return</u></em> statement
+at line 8 – inside of the <em>catch</em>, where it <em>then</em> gets routed back to the calling method
  (<em>main</em>) before terminating.
 <br>
 <br>
