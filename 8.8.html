@@ -80,7 +80,7 @@ Exception1 is thrown, and immediately caught (at line 11) – since (the compile
 <span style="color: #A52A2A"><em>the exception is immediately 
 <b>re-thrown</b></em></span>, but this time – <em><u>not</em> caught</u>.
 The result is that, the exception is passed back down the stack to the <em>calling method</em> 
-(e.g. <em>main</em>) where the program terminates. 
+(e.g. <em>main</em>) where the program terminates with an exception (of the type defined at line 7). 
 <br>
 <br>
 The act of <em>re-throwing</em> an exception allows for inserting and executing a logging statement 
