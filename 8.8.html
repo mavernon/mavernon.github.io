@@ -68,10 +68,31 @@ problem # &nbsp; 8.8</div>
 
 <div id="solution" class="hidden">
 <h2>
-
-
-
-
+Both classes extend Exception (an <em>unchecked</em> exception object) - although
+ the two extended classes have no inheritance relationship with each other. Therefore (
+ <em>since its implementation in Java SE 7</em>),
+  both <em><u>sub</u></em>classes must be included in the throws clause (at line 4).
+<br>
+<br>
+... After the <em><b>if</b> statement</em> at line 6 evaluates to true, 
+Exception1 is thrown, and immediately caught (at line 11) – since (the compiler recognizes that) its a 
+<em>sub</em>class of Exception. Following this, 
+<span style="color: #A52A2A"><em>the exception is immediately 
+<b>re-thrown</b></em></span>, but this time – <em><u>not</em> caught</u>.
+The result is that, the exception is passed back down the stack to the <em>calling method</em> 
+(e.g. <em>main</em>) where the program terminates. 
+<br>
+<br>
+The act of <em>re-throwing</em> an exception allows for inserting and executing a logging statement 
+(or any another logic) just prior to the exception being re-thrown (i.e. <em>just before line 12</em>, in order to enhance the overall value
+of the source code (e.g. <em>troubleshooting</em>). This contrasts with throwing an 
+exception and simply allowing a program to terminate without further action.
+<br>
+<br>
+Re-throwing an exception, as described in this example, <em><u>will only 
+successfully compile if</u></em>; 1) there 
+are no other catch blocks that can handle the re-thrown exception, and 2) if the re-thrown exception 
+is a subtype or supertype of the exception in the catch clause (at line 11).
 <br>
 <br>
 <br>
