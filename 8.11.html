@@ -31,7 +31,7 @@ if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
 <br>
 <h6>
 <div class="blue"><b>HANDLING EXCEPTIONS</b>  <br>
-problem # &nbsp; 8.3</div>
+problem # &nbsp; 8.11</div>
 
 </h6>
 
@@ -41,15 +41,23 @@ problem # &nbsp; 8.3</div>
 
 <ol >
 <li><a class="a0">public class Test {</a> </li>
-<li><a class="a1">public static void main(String []args) {</a> </li>
-<li><a class="a2">Test instance = new Test();</a> </li>
-<li><a class="a2">System.out.println(instance.number()); </a> </li>
+<li><a class="a1">static void m1() {</a> </li>
+<li><a class="a2">throw new RuntimeException();</a> </li>
 <li><a class="a1">}</a> </li>
-<li><a class="a1">private int number()</a> </li>
+<li><a class="a1">public static void main(String []args) {</a> </li>
 <li><a class="a2">try { </a> </li>
-<li><a class="a3">new RuntimeException(); </a> </li>
-<li><a class="a2">}  finally { </a> </li>
-<li><a class="a3">return 1; </a> </li>
+<li><a class="a3">m1 ();</a> </li>
+<li><a class="a2">}  catch (Exception e1) { </a> </li>
+<li><a class="a3">try {</a> </li>
+<li><a class="a4">throw new Exception( ) {</a> </li>
+<li><a class="a3">}  catch (Exception e2) { </a> </li>
+<li><a class="a4">System.out.println("2"); </a> </li>
+<li><a class="a4">throw new RuntimeException( ) {</a> </li>
+<li><a class="a3">} finally {</a> </li>
+<li><a class="a4">System.out.println("3"); </a> </li>
+<li><a class="a3">} </a> </li>
+<li><a class="a2">} finally {</a> </li>
+<li><a class="a3">System.out.println("4"); </a> </li>
 <li><a class="a2">}</a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>

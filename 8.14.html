@@ -31,7 +31,7 @@ if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
 <br>
 <h6>
 <div class="blue"><b>HANDLING EXCEPTIONS</b>  <br>
-problem # &nbsp; 8.3</div>
+problem # &nbsp; 8.14</div>
 
 </h6>
 
@@ -40,18 +40,18 @@ problem # &nbsp; 8.3</div>
 
 
 <ol >
-<li><a class="a0">public class Test {</a> </li>
-<li><a class="a1">public static void main(String []args) {</a> </li>
-<li><a class="a2">Test instance = new Test();</a> </li>
-<li><a class="a2">System.out.println(instance.number()); </a> </li>
-<li><a class="a1">}</a> </li>
-<li><a class="a1">private int number()</a> </li>
-<li><a class="a2">try { </a> </li>
-<li><a class="a3">new RuntimeException(); </a> </li>
-<li><a class="a2">}  finally { </a> </li>
-<li><a class="a3">return 1; </a> </li>
-<li><a class="a2">}</a> </li>
-<li><a class="a1">}</a> </li>
+<li><a class="a0">class  A {</a> </li>
+<li><a class="a1">public void execute( ) </a> </li>
+<li><a class="a2">throws RuntimeException {}
+<li><a class="a0">}</a> </li>
+<li><a class="a0">class  B extends A {</a> </li>
+<li><a class="a1">public void execute( ) </a> </li>
+<li><a class="a2">throws UnsupportedOperationsException {}
+<li><a class="a0">}</a> </li>
+<li><a class="a0">public class  Test extends A {</a> </li>
+<li><a class="a1">public void execute( ) </a> </li>
+<li><a class="a1">public void execute(int i) 
+<li><a class="a2">throws Exception {} </a> </li>
 <li><a class="a0">}</a> </li>
 </ol>
 </div>
@@ -66,7 +66,6 @@ problem # &nbsp; 8.3</div>
 
 <div id="solution" class="hidden">
 <h2>
-
 
 
 
