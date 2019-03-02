@@ -73,8 +73,15 @@ problem # &nbsp; 8.10</div>
 
 <div id="solution" class="hidden">
 <h2>
-
-
+Because <em><u>method</u></em> <em>m1</em> is a <em><b>static method</b></em>
+that is <em><u>called from 
+within the same class</u></em> – in which its declared, it can be called without the need to instantiate an object,
+to do so.
+<br>
+<br>
+After <em>m1</em> is called (at line 11) in this example, the code flow returns to the 
+method declaration (at line 2) where it subsequently instantiates a <em>ClassCastException</em> object,
+and then does nothing more.
 
 
 <br>
