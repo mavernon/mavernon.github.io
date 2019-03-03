@@ -49,10 +49,10 @@ problem # &nbsp; 8.11</div>
 <li><a class="a3">m1 ();</a> </li>
 <li><a class="a2">}  catch (Exception e1) { </a> </li>
 <li><a class="a3">try {</a> </li>
-<li><a class="a4">throw new Exception( ) {</a> </li>
+<li><a class="a4">throw new Exception( ); </a> </li>
 <li><a class="a3">}  catch (Exception e2) { </a> </li>
 <li><a class="a4">System.out.println("2"); </a> </li>
-<li><a class="a4">throw new RuntimeException( ) {</a> </li>
+<li><a class="a4">throw new RuntimeException( ); </a> </li>
 <li><a class="a3">} finally {</a> </li>
 <li><a class="a4">System.out.println("3"); </a> </li>
 <li><a class="a3">} </a> </li>
@@ -74,7 +74,10 @@ problem # &nbsp; 8.11</div>
 
 <div id="solution" class="hidden">
 <h2>
-
+Because <em><u>method</u></em> <em>m1</em> is a <em><b>static method</b></em>
+that is <em><u>called from 
+within the same class</u></em> – in which its declared, it can be called <em>without 
+needing to instantiate an object</em> to do so. 
 
 
 
