@@ -69,13 +69,14 @@ problem # &nbsp; 8.9</div>
 
 <div id="solution" class="hidden">
 <h2>
-When multiple exceptions are caught, they must appear in order – from the most
-specific exception to the most general one. Since <em><b>RuntimeException</b></em> is more specific than 
-<em><b>Exception</b></em>, yet <u>it appears as part of the last catch clause</u> in
-this code (at line 12), this program will fail to compile.
+When multiple exceptions are caught, <span style="color: #A52A2A">they must appear 
+in order – from the most specific exception to the most general</span> one. 
+For example, since <em><b>RuntimeException</b></em> is more specific than 
+<em><b>Exception</b></em>, yet  <em>RuntimeException</em> (at line 12) <u>appears as 
+part of the last catch clause</u> – <em><u>after</u></em> Exception (at line 8), this code will fail to compile.
 <br>
 <br>
-If the exceptions in this example <em>did</em> appear in the correct order, <em>RuntimeException</em> would appear first 
+If the exceptions in this example <em>were</em> written in the correct order, <em>RuntimeException</em> would appear first 
 (then <em>Exception</em> would appear, and then <em>Throwable</em>). Then, when the code 
 executed, an 
 <em><b>ArithmeticException</b></em> would be thrown after the last iteration of the 
