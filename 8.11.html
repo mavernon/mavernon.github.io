@@ -74,11 +74,36 @@ problem # &nbsp; 8.11</div>
 
 <div id="solution" class="hidden">
 <h2>
-Because <em><u>method</u></em> <em>m1</em> is a <em><b>static method</b></em>
-that is <em><u>called from 
+Because <em><u>method</u></em> <em>m1</em> is a <em><b>static 
+method</b></em> that is <em><u>called from 
 within the same class</u></em> – in which its declared, it can be called <em>without 
 needing to instantiate an object</em> to do so. 
-
+<br>
+<br>
+Therefore, after the call to <em>m1</em>, and the subsequent <em><b>throw</b></em> clause
+at line 3, the<em> RuntimeException</em> (thrown at line 3) is <em><b>caught</b></em> at line 8, and
+the code flow enters the next <em>try block</em> (at line 9) – where another 
+<em>throw</em> clause occurs. 
+<br>
+<br>
+The <em>catch block</em> for the <em>Exception</em> thats thrown at line 10, 
+contains code logic that both prints a String value, and <em>throws</em> another 
+<em>RuntimeException</em> (at line 13). Since <em>RuntimeException</em> is <u>not 
+required to be caught</u> after its thrown, the execution of the program code is not 
+interrupted as a result of the thrown 
+<em>RuntimeException</em>. Instead, the code flow simply transitions to the next line of program code.
+<br>
+<br>
+Note: Although the the execution of the program code is not interrupted as a result of the thrown 
+<em>RuntimeException</em>, when the program completes its execution, the program <u>results
+indicate that a (<em>un-caught</em>) <em>RuntimeException</em> did in fact occur</u>, when
+the program was run.
+<br>
+<br>
+The <em><b>finally</b> block</em> that immediately follows the thrown 
+<em>RuntimeException</em> 
+(at line 13) also contains code logic that prints a String value – and is subsequently followed by 
+another <em><b>finally</b> block</em>, that prints a String value as well.
 
 
 <br>
