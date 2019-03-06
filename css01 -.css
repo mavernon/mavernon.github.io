@@ -7,6 +7,8 @@ a {
 	}
 
     
+
+
 body {
 	margin: 0px 180px 0px  30px; 
 	padding: 0px 0px 0px 0px;
@@ -123,16 +125,6 @@ h2 {
 .unhidden	{
 	display: block;
     	}
-  
-.button  input[type=text] {
-    display: block; 
-    margin-top: -27px;
-    padding:0px; 
-    border:0px solid #000; 
-    font-size:96%;   
-}
-  
-
    		
 h3 { 
 	font-size: 15px;
