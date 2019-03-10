@@ -59,16 +59,16 @@ problem # &nbsp; 5.9</div>
    statement exists).
  <br>
  <br>
- At line 4, the first iteration of the <em>while</em> loop statement
- <span style="color: #A52A2A">((i = i + 2) < 7)</span> evaluates to <em>true</em>. 
- However, the evaluation of the <em>while</em> loop statement also includes a reassignment
- of the the variable <em>i</em>, to the value <em>2</em>, which results in the output of 3, when
- the print statement executes, at line 5.
+ At line 4, the condition thats defined after the first <em>while</em> loop statement
+ <span style="color: #A52A2A">((i = i + 2) < 7)</span> executes, is initially true. Note that the
+ execution of this statement simultaneously assigns the variable <em>i</em>, the value <em>2</em>.
+ Therefore, the first iteration of the <em>while loop</em> statement, as a result of the increment operator
+  - combined with the print statement at line 5, prints the output 3.
   <br>
  <br>
  When the code flow returns to execute the second iteration of the <em>while loop</em> statement,
- the reassignment of the the variable <em>i</em> (at line 4), this time, is <em>5</em>.
- Similarly, this now outputs a value of 6, when the print statement executes, at line 5.
+ the value that gets simultaneously assigned to the variable <em>i</em> (at line 4), this time, is <em>5</em>.
+ Similarly, the increment operator again combines with the print statement at line 5, but this time, prints the output 6.
  <br>
  <br>
  The value <em>6</em>, when applied to the condition that follows the <em>while</em> loop statement
