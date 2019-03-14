@@ -56,7 +56,47 @@ problem # &nbsp; 5.10</div>
 </h9>
 <div id="solution" class="hidden">
 <h2>
+ The <em><u>do</u></em> portion 
+ of the <em><b>do while</b></em> construct in this code (lines 5 thru 8) ensures that the println
+ statement (at line 6) will execute at least once. Directly following this action, the <em><u>while</u></em>
+ portion of the <em>do while</em> (if it evaluates to true) enables any subsequent code logic to execute – before returning 
+ the code flow to the <em>do</em> portion 
+ of the <em>do while</em> (at line 5) where the process repeats.
+ <br>
+ <br>
+ In this example, the evaluation of the <em><u>while</u></em> portion of the <em>do while</em> (at line 7)
+ requires a call to method <em>m1</em> (at line 9). The logic inside of method <em>m1</em> 
+ (i.e. the <u><em>post</em>-increment</u> operator that follows the return statement) is designed 
+ to modify the value of a variable the 
+ very next time that the variable is referenced – <em>after</em> the <em>post</em>-increment operator is applied.
+<br>
+ <br>
+ The next occurence in which
+ the target variable <em>i</em> is referenced however, takes place outside of the scope in which the 
+ <em>post</em>-increment operator was applied. 
+ As a result, because the
+ post-increment operator at line 10 has no impact on the target variable <em>i</em> (in this case) <em><u>until 
+ after</u></em> the 
+ variable 
+ leaves the scope in which the <em>post</em>-increment logic was initiated, the potential impact 
+ of the <em>post</em>-increment operator on variable <em>i</em> never occurs. 
+ <br>
+ <br>
+ In other words, passing the value of variable <em>i</em> to the calling construct, via the return
+ statement – coupled with a <em><u>post</u>-increment</em> operator, ensures that the value that the 
+ variable has when it returns, is the same value it had when it arrived as an argument to the called method. 
+ That value, in this example, is zero.
  
+ <br>
+ <br>
+ The consequence of processing a variable whose value does not change, through the 
+ <em>do while</em> construct in this code (i.e. lines 5 thru 8) as described, is that an infinite loop occurs
+ when the code is executed.
+ <br>
+ <br>
+ Conversely, if a <em><u>pre</u>-increment</em> operator were applied to the value of variable <em>i</em>
+ (e.g. <b> ++ i</b>) at line 10, the <em>do while</em> loop structure (at lines 5 thru 8) would cause the int value 
+ of c (as declared at line 4) to be printed five times, and the program would end.
 
 <br>
 <br> 
