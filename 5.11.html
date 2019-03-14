@@ -77,13 +77,15 @@ is incremented by <em>one</em>
 (due to the <em>increment expression</em> <b>i ++</b> thats included in the 
 <em>for loop</em> statement definition, at line 5). This causes the 
 variable/operand (<em><b>i</b></em> ), at the time that the <em>for loop</em> statement evaluates to
-false - and then terminates, to have a value of six.
+false - and then terminates, to have a value of six. Although this value is immediately decreased by a value of one, 
+after the final statement in the <em><u>do</u></em> portion of the <em>do while</em> loop 
+statement (at line 7) executes.
 <br>
 <br>
-As a result, when the two statements that are nested
+As a result, when both statements that are nested
 inside of the <em><u>do</u></em> portion of the <em>do while</em> loop statement complete, and
 the code flow moves to the <em><u>while</u></em> portion of the <em>do while</em> loop statement 
-at line 8, the <em><u>while</u></em> portion evaluates to false (i.e. 6 < 5  <em>is false</em>)
+at line 8, the <em><u>while</u></em> portion evaluates to false (i.e. 5 < 5  <em>is false</em>)
 , and the entire program code terminates.
  
  
