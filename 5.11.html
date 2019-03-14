@@ -37,9 +37,9 @@ problem # &nbsp; 5.11</div>
 <ol >
 <li><a class="a0">public class Test{</a> </li>
 <li><a class="a1">public static void main(String []args) {</a> </li>
-<li><a class="a2">int i = 0;</a> </li>
+<li><a class="a2">int i = 4;</a> </li>
 <li><a class="a2">do {</a> </li>
-<li><a class="a3">for( ;i < 6, i++); </a> </li>
+<li><a class="a3">for( ;i < 6; i++); </a> </li>
 <li><a class="a4">System.out.print (i); </a> </li>
 <li><a class="a3">i--; </a> </li>
 <li><a class="a2">} while(i < 5);</a> </li>
@@ -54,8 +54,37 @@ problem # &nbsp; 5.11</div>
 </h9>
 <div id="solution" class="hidden">
 <h2>
- 
- 
+The <em><u>do</u></em> portion of the <em><b>do while</b></em> loop statement in this example, includes
+both a <em>for loop</em> statement, and a routine statement (at line 7) that are nested inside of it.
+<br>
+<br>
+ The absence of an initialization expression in the <em><b>for loop</b></em> statement (at line 5) means that the
+ variable <em><b>i</b></em> assumes the value to which it was initialized at line 3. Note that, the only 
+ expression that absolutely <em><u>must</u></em> be present in a <em>for loop</em> statement, is
+ the middle one – the <em>termination expression</em> (which always evaluates to either 
+ <em>true</em> or <em>false</em>).
+ <br>
+<br>
+The <em>for loop</em> statement in this example iterates/repeats two times (i.e. as long as the 
+<em>termination expression</em> evaluates to <em>true</em>) before it terminates, and the code
+flow moves to the next statement (at line 7). 
+<br>
+<br>
+Immediately prior to each time that the <em>for loop</em> statement in this example repeats 
+however, the value of the 
+variable/operand (<em><b>i</b></em> ), thats included in the <em>termination expression,</em> 
+is incremented by <em>one</em> 
+(due to the <em>increment expression</em> <b>i ++</b> thats included in the 
+<em>for loop</em> statement definition, at line 5). This causes the 
+variable/operand (<em><b>i</b></em> ), at the time that the <em>for loop</em> statement evaluates to
+false - and then terminates, to have a value of six.
+<br>
+<br>
+As a result, when the two statements that are nested
+inside of the <em><u>do</u></em> portion of the <em>do while</em> loop statement complete, and
+the code flow moves to the <em><u>while</u></em> portion of the <em>do while</em> loop statement 
+at line 8, the <em><u>while</u></em> portion evaluates to false (i.e. 6 < 5  <em>is false</em>)
+, and the entire program code terminates.
  
  
 <br>
