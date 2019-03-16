@@ -27,7 +27,7 @@ if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
 <br>
 <h6>
 <div class="blue"><b>USING LOOP CONSTRUCTS</b>  <br>
-problem # &nbsp; 5.9</div>
+problem # &nbsp; 5.14</div>
 
 </h6>
 
@@ -37,9 +37,11 @@ problem # &nbsp; 5.9</div>
 <ol >
 <li><a class="a0">public class Test{</a> </li>
 <li><a class="a1">public static void main(String []args) {</a> </li>
-<li><a class="a2">int i = 0;</a> </li>
-<li><a class="a2">while ((i = i + 2) < 7)</a> </li>
-<li><a class="a3">System.out.print (++i); </a> </li>
+<li><a class="a2">int i = 9;</a> </li>
+<li><a class="a2">while ((i < 7) && (i > 12)) {</a> </li>
+<li><a class="a3">i += 5; </a> </li>
+<li><a class="a2">} while (i++ < 13);</a> </li>
+<li><a class="a2">System.out.print (i); </a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
 </ol>
@@ -51,30 +53,9 @@ problem # &nbsp; 5.9</div>
 </h9>
 <div id="solution" class="hidden">
 <h2>
- A <em><b>while (loop)</b></em> statement is aways followed by a condition which, after being evaluated, is 
- determined to be either true or false. If the condition is true, and 
- is further followed by some other type of action or logic, then that action gets executed.
- Otherwise, if a <em>while loop's</em> condition evaluates to false, no looping occurs and instead,
-   the code flows directly to the next statement following the <em>while loop</em> (if another
-   statement exists).
- <br>
- <br>
- At line 4, the condition thats defined after the first <em>while</em> loop statement
- <span style="color: #A52A2A">((i = i + 2) < 7)</span> executes, is initially true. Note that the
- execution of this statement simultaneously assigns the variable <em>i</em>, the value <em>2</em>.
- Therefore, the first iteration of the <em>while loop</em> statement, as a result of the increment operator
-  - combined with the print statement at line 5, prints the output 3.
-  <br>
- <br>
- When the code flow returns to execute the second iteration of the <em>while loop</em> statement,
- the value that gets simultaneously assigned to the variable <em>i</em> (at line 4), this time, is <em>5</em>.
- Similarly, the increment operator again combines with the print statement at line 5, but this time, prints the output 6.
- <br>
- <br>
- The value <em>6</em>, when applied to the condition that follows the <em>while</em> loop statement
- after the third loop iteration, returns false - and causes the flow of the code to stop/terminate.
  
-
+ 
+ 
 <br>
 <br> 
 <h7><script type="text/javascript" src="Last.js"></script></h7> 
