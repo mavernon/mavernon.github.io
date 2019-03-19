@@ -39,7 +39,7 @@ problem # &nbsp; 5.11</div>
 <li><a class="a1">public static void main(String []args) {</a> </li>
 <li><a class="a2">int i = 4;</a> </li>
 <li><a class="a2">do {</a> </li>
-<li><a class="a3">for( ;i < 6; i++); </a> </li>
+<li><a class="a3">for( ;i < 6; i++) </a> </li>
 <li><a class="a4">System.out.print (i); </a> </li>
 <li><a class="a3">i--; </a> </li>
 <li><a class="a2">} while(i < 5);</a> </li>
@@ -65,27 +65,29 @@ both a <em>for loop</em> statement, and a routine statement (at line 7) that are
  <em>true</em> or <em>false</em>).
  <br>
 <br>
-The <em>for loop</em> statement in this example iterates/repeats two times (i.e. as long as the 
-<em>termination expression</em> evaluates to <em>true</em>) before it terminates, and the code
-flow moves to the next statement (at line 7). 
+Ultimately, the <em>for loop</em> statement in this example repeats two times (i.e. as long as the 
+<em>termination expression</em> evaluates to <em>true</em>) before the loop terminates, and 
+the code flow moves to the next statement (at line 7). 
 <br>
 <br>
-Just prior to each time that the <em>for loop</em> statement in this example repeats 
+Notably, each time that the <em>for loop</em> statement in this example repeats 
 however, the value of the 
-variable (<em><b>i</b></em> ), thats included in the <em>termination expression,</em> 
+variable <em><b>i</b></em> 
 is incremented by <em>one</em> 
-(due to the <em>increment expression</em> <b>i ++</b> thats included in the 
-<em>for loop</em> statement definition, at line 5). This causes <em><b>i</b></em>, at the time that the <em>for loop</em> statement evaluates to
-false - and then terminates, to have a value of six. However, this value is immediately decreased by a value of one, 
-after the final statement in the <em><u>do</u></em> portion of the <em>do while</em> loop 
-statement (at line 7) executes.
+(due to the <em>post increment expression </em> <b>i ++</b> at line 5). This 
+causes the value of <em><b>i</b></em>, at the time that the <em>for loop</em> statement evaluates to
+false - and terminates, to be <em>six</em>. Although, this value is then immediately decreased by 
+one, 
+<em><u>after</u></em> the final statement in the <em><u>do</u></em> portion of the <em>do while</em> loop 
+statement executes (at line 7) .
 <br>
 <br>
-As a result, when both statements that are nested
-inside of the <em><u>do</u></em> portion of the <em>do while</em> loop statement complete, and
-the code flow moves to the <em><u>while</u></em> portion of the <em>do while</em> loop statement 
-at line 8, the <em><u>while</u></em> portion evaluates to false (i.e. 5 < 5  <em>is false</em>)
-, and the entire program code terminates.
+When both statements that are nested
+inside of the <em><u>do</u></em> portion of the <em>do while</em> loop statement complete 
+their iterations, and
+the code flow moves to the <em><u>while</u></em> portion of the <em>do while</em> loop 
+at line 8, the <em><u>while</u></em> portion of the <em>do while</em> loop evaluates to false 
+(i.e. 5 < 5  <em>is false</em>), causing the entire program code to terminate its execution.
  
  
 <br>
