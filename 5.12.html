@@ -53,24 +53,26 @@ problem # &nbsp; 5.12</div>
 </h9>
 <div id="solution" class="hidden">
 <h2>
- The <em>int <u>type</u></em> designation, at the beginning of the third line, is syntactical <em>
- short-hand</em> 
- that eliminates the need to insert the <em>int</em> type before every variable declaration that falls within
- the same statement (e.g. counter). 
+ The <em>int <u>type</u></em> designation, at the beginning of line 3, is <em>
+ short-hand</em> syntax
+ that eliminates the need to insert the <em>int</em> type before every variable thats declared in
+ the same statement (e.g. both <em>i</em> and <em>counter</em> are <em>int</em> type variables). 
 <br>
 <br> 
-The <em><b>while</b> loop</em> statement (at line 4) evaluates to true – ten times, repeatedly. However, the 
-logic thats associated with <u>the <em><b>if</b></em> statement, inside of the the <em>while loop</em>
-</u>,
-is true only every other time that the <em>while loop</em> statement repeats. The result is that, the 
-variable <em>counter</em> increases by <em>one</em>, five times – before the <em>while loop</em> 
-(that contains it)
-evaluates to false. 
+The <em><b>while</b> loop</em> statement (at line 4) evaluates to true – ten times, repeatedly. However, 
+the 
+use of the <em><b>modulous operator </em>(%)</b> <u>within the <em><b>if</b></em></u> statement 
+(inside of the the <em>while loop</em>) makes the value of the <em>if</em> statement
+true – <em>only every other time</em> that the <em>while loop</em> statement repeats. The result is that, 
+although the <em>while loop</em> repeats ten times, the 
+variable <em>counter</em> (within the <em>if</em> statement) increases by <em>one</em>, five times – before the <em>while loop</em> 
+(that contains the <em>if</em> statement)
+evaluates to false, and ceases to repeat. 
 <br>
 <br> 
-When the <em>while loop</em> (at line 4) finally does
-evaluate to false, the code flow immediately jumps to the statement at line 7, and executes it – before the 
-program ends; resulting in the output <em>5</em>.
+Following its last iteration, after the <em>while loop</em> finally does
+evaluate to false, the code flow then immediately jumps to the statement at line 7 and executes – 
+outputting the value <em>5</em>, before the entire program terminates.
 <br>
 <br> 
 <h7><script type="text/javascript" src="Last.js"></script></h7> 

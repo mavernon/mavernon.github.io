@@ -53,9 +53,28 @@ problem # &nbsp; 5.13</div>
 </h9>
 <div id="solution" class="hidden">
 <h2>
- 
- 
-
+Note that, whenever the assignment operator is combined with a mathematical operator (e.g. at lines 5 and 6),
+the mathematical operator is always written first.
+ <br>
+<br>
+Since the <em><b>do</b></em> portion 
+ of the <em><b>do while</b></em> statement (lines 4 thru 6) ensures that any code that
+ immediately follows the <em>do</em> will execute at least once, the value of <em>i</em> 
+ after the assignment statement at line 5 completes, is <em>30</em>. However, the variable 
+ <em>i</em> 's value is immediately reassigned (at line 6) as part of logic that occurs just prior to – but 
+ in conjunction with the evaluation of the complete <em>while</em> portion of the 
+ <em>do while</em> statement. 
+ <br>
+<br> 
+ Because the <em>while loop</em> evaluates to true, 
+ this same sequence of actions is repeated again.
+<br>
+<br> 
+This time however, after the assignment statement at line 5 completes, the value of <em>i</em>
+ is <em>50</em>; causing the <em>while</em> portion of the 
+ <em>do while</em> statement to return <em>false</em> and <em><u>not</u></em> execute.
+ The code flow then immediately jumps to the statement at line 7 and executes – 
+outputting the value <em>50</em>, before the entire program terminates.
 <br>
 <br> 
 <h7><script type="text/javascript" src="Last.js"></script></h7> 
@@ -71,7 +90,6 @@ problem # &nbsp; 5.13</div>
 <input type="text" value="Home" onclick="history.back(-1)" />     
 </div>
 </h2>
-
 <br>
 <br>
 
