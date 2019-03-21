@@ -56,8 +56,9 @@ problem # &nbsp; 5.14</div>
 The first <em>while loop</em> statement at line 4 contains two expressions, separated by the
 <em>short-circuit</em> operator <b>&&</b>. As a rule, the <em>short-circuit</em> operator, &&, 
 will <em>not</em> evaluate
-the second part of a statement if the first part of the statement is <em>false</em> (as in this case).
-As a result, the first <em>while loop</em> statement (at lines 4 thru 5) fails to execute (i.e. <em> it 
+the second expression – if the first expression of a <em>while loop</em> statement 
+evaluates to <em>false</em> (as in this case).
+Consequently, the first <em>while loop</em> (at lines 4 thru 5) fails to execute (i.e. <em> it 
 never iterates</em>).
 <br>
 <br>
@@ -68,7 +69,7 @@ This repeats continually, until the value of <em>i</em> causes the <em>while loo
  to evaluate to <em>false</em> (halting the <em>while loop</em>'s ability to repeat). At that point,
 the code flow moves immediately to the statement at line 7; which <u>outputs the last value that was  
 incremented</u> by the <em>post-increment</em> operator 
- (i.e. <em>14</em>) before the <em>while loop</em> statement at line 6 evaluated to false. Following 
+ (i.e. <em>14</em>) before the <em>while loop</em> statement (at line 6) evaluated to false. Following 
  this output, the program terminates.
  
 <br>
