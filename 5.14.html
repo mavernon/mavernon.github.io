@@ -53,20 +53,23 @@ problem # &nbsp; 5.14</div>
 </h9>
 <div id="solution" class="hidden">
 <h2>
-The code logic thats included in the first <em>while loop</em> statement, at line 4, contains the
-<em>short-circuit</em> operator, <b>&&</b>. A <em>short-circuit</em> operator will not evaluate
-the second part of a statement, if the first part of the statement is <em>false</em> (as in this case).
-As a result, the first <em>while loop</em> statement (lines 4 and 5)  simply fail to execute.
+The first <em>while loop</em> statement at line 4 contains two expressions, separated by the
+<em>short-circuit</em> operator <b>&&</b>. As a rule, the <em>short-circuit</em> operator, &&, 
+will <em>not</em> evaluate
+the second part of a statement if the first part of the statement is <em>false</em> (as in this case).
+As a result, the first <em>while loop</em> statement (at lines 4 thru 5) fails to execute (i.e. <em> it 
+never iterates</em>).
 <br>
 <br>
-The second <em>while loop</em> statement, at line 6 modifies the value of the variable 
-<em>i</em> (via a 
-<em><b>post</b>-increment</em> operator)
- <em><u>after</u></em> the statement is evaluated – repeatedly, until the value of <em>i</em> is such that the 
- <em>while loop</em> statement returns the value <em>false</em> and fails to execute. At this point,
-the code flow then immediately moves to the statement at line 7 and executes; 
-outputting the last value that was incremented by the <em>post-increment</em> operator 
-– <em>14</em>, before the entire program terminates.
+The behavior of the expression thats associated with the second <em>while loop</em> statement (at line 6) modifies the value 
+of the variable <em>i</em> (via a 
+<em><u>post</u>-increment</em> operator) <em><u>after</u></em> the expression is evaluated. 
+This repeats continually, until the value of <em>i</em> causes the <em>while loop</em> expression 
+ to evaluate to <em>false</em> (halting the <em>while loop</em>'s ability to repeat). At that point,
+the code flow moves immediately to the statement at line 7; which <u>outputs the last value that was  
+incremented</u> by the <em>post-increment</em> operator 
+ (i.e. <em>14</em>) before the <em>while loop</em> statement at line 6 evaluated to false. Following 
+ this output, the program terminates.
  
 <br>
 <br> 
