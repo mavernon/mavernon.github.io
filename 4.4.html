@@ -42,8 +42,8 @@ problem # &nbsp; 4.4</div>
 <ol >
 <li><a class="a0">public class Test {</a> </li>
 <li><a class="a1">public static void main(String []args) {</a> </li>
-<li><a class="a2">int[] i1 = new int[ 5]; </a> </li>
-<li><a class="a2">Integer[] i2 = new Integer[ 5]; </a> </li>
+<li><a class="a2">int[] i1 = new int[5]; </a> </li>
+<li><a class="a2">Integer[] i2 = new Integer[5]; </a> </li>
 <li><a class="a2">if(i1[ 1] = = 0) System.out.print("a"); </a> </li>
 <li><a class="a2">if(i2[ 2] = = 0) System.out.print(" b");</a> </li>
 <li><a class="a2">System.out.print( i2[ i1[ 4]]); </a> </li>
@@ -63,22 +63,22 @@ problem # &nbsp; 4.4</div>
 
 <div id="solution" class="hidden">
 <h2>
-The five members of <u><em>int</em></u> array i1, at line 3, all have the default value of 
-<em><b>zero</b></em>. 
-While the five members
-of the <u><em>Integer</em></u> array at line 4 all have the default value of 
-<em><b>null</b></em> 
-(since <em>Integer</em> is the <u><em>object</em></u> interpretation of <em>int</em> ).
+
+An <u><em>int</em></u> array reference (i1), containing five members, is created by 
+the statement at line 3. Each of the five members of <em>i1</em> has the value of <em><b>zero</b></em>
+by default. Similarly,  an <u><em>Integer</em></u> array reference (i2) is created at
+line 4. However, each of the members of <em>i2</em> are <u><em>object</em></u> 
+types – with a default value of <em><b>null</b></em>. 
 <br>
 <br>
 Accordingly, the code <u><em>compiles</em></u> successfully; it contains no type mismatch or syntactical errors.
 However, <u>a logical error (i.e.  a NullPointerException) is thrown at 
 <b><em>runtime</em></b></u>. 
-The reason that the runtime error is thrown is, when the second if statement (at line 6) executes,
-the logic attempts to compare a null value, to an int value. In other words, the program attempts
+The reason that a runtime error is thrown is, the expression following the if statement (at line 6)
+attempts to compare a null value, to an int value. In other words, the program attempts
 to access an object (i.e. i2[2] ) that has no value – and compare it to an <em>int</em> (<em>
-primitive</em>) object that <em>does</em> have a value. This logic discrepancy is what causes
-the NullPointerException to be thrown at runtime.
+primitive</em>) object that <em>does</em> have a value. This discrepancy is what causes
+the NullPointerException to be thrown <u><em>at runtime</em></u>.
 <br>
 <br>
 Note that, the java compiler - at compile time, doesn't have the ability to detect logic errors; 
