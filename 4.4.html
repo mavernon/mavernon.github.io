@@ -64,21 +64,19 @@ problem # &nbsp; 4.4</div>
 <div id="solution" class="hidden">
 <h2>
 
-An <u><em>int</em></u> array reference (i1), containing five members, is created by 
-the statement at line 3. Each of the five members of <em>i1</em> has the value of <em><b>zero</b></em>
-by default. Similarly,  an <u><em>Integer</em></u> array reference (i2) is created at
+An <u><em>int</em></u> array reference (i1), that  contains five members, is created by 
+the statement at line 3. Each of the five array reference members created, has the default value of <em><b>zero</b></em>. Similarly,  an <u><em>Integer</em></u> array reference (i2) is created at
 line 4. However, each of the members of <em>i2</em> are <u><em>object</em></u> 
-types – with a default value of <em><b>null</b></em>. 
+types. These members have a default value of <em><b>null</b></em>. 
 <br>
 <br>
-Accordingly, the code <u><em>compiles</em></u> successfully; it contains no type mismatch or syntactical errors.
-However, <u>a logical error (i.e.  a NullPointerException) is thrown at 
+While this code does <u><em>compile</em></u> successfully (with no type mismatch or syntax errors),
+a logical error (i.e.  <em>NullPointerException</em>) <u>is thrown at 
 <b><em>runtime</em></b></u>. 
-The reason that a runtime error is thrown is, the expression following the if statement (at line 6)
-attempts to compare a null value, to an int value. In other words, the program attempts
-to access an object (i.e. i2[2] ) that has no value – and compare it to an <em>int</em> (<em>
-primitive</em>) object that <em>does</em> have a value. This discrepancy is what causes
-the NullPointerException to be thrown <u><em>at runtime</em></u>.
+The runtime error occurs because, the expression following the if statement (at line 6)
+attempts to compare a null value - to an int value, when the code is run. In other words, the program code attempts
+to access the object located at array index location i2[2], which is <em>null</em> – and compare it to an <em>int</em> (<em>
+primitive</em>) object that <em>does</em> have a value. 
 <br>
 <br>
 Note that, the java compiler - at compile time, doesn't have the ability to detect logic errors; 
