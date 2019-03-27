@@ -71,7 +71,7 @@ types. These members have a default value of <em><b>null</b></em>.
 <br>
 <br>
 While this code does <u><em>compile</em></u> successfully (with no type mismatch or syntax errors),
-a logical error (i.e.  <em>NullPointerException</em>) <u>is thrown at 
+a logical error (i.e.  <em><b>NullPointerException</b></em>) <u>is thrown at 
 <b><em>runtime</em></b></u>. 
 The runtime error occurs because, the expression following the if statement (at line 6)
 attempts to compare a null value - to an int value, when the code is run. In other words, the program code attempts
@@ -83,8 +83,8 @@ Note that the java compiler, at compile time, doesn't have the ability to detect
 This means that, in this case, it is perfectly legitimate for the <em>if</em> expression at line 6 
 to contain operands that have both a null - and a non-null value.
 However, what is <u><em>not</u></em> legitimate, is to perform an operation that compares them
-(<em>which again, the compiler is unable to discern</em>) – since <b>the operands represent two 
-incompatible object <em>types</em></b>.
+(<em>which again, the compiler is unable to discern</em>) – since <b>null is not a value, and therefore 
+can't be used in <em>any</em> type of <em>operation</em> that requires determining value</b>.
 
 
 <br>
