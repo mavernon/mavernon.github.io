@@ -77,21 +77,33 @@ The println statement at line 5 interprets the value of the array element at ind
 
 <div id="solution" class="hidden">
 <h2>
- The statement at line 4 creates three <em><b>arrays-of-arrays</b></em> 
- (...commonly referred to as,
-  a single <em>three-dimensional</em> array).
+ The statement at line 4 creates a <em>three-dimensional</em> array reference 
+ (named, <em>multiarray</em>). 
+ <br><br>
+ The <em>index location</em> of an element, in any multi-dimensional array, 
+ can be defined syntactically through the use of brackets that individually represent 
+ each array dimension (group) – but collectively specify that array element's unique 
+ <em>index location</em>.
+ <br><br>
+<!--
+ The inner most dimension consists
+<br><br> 
+ From a logical perspective, this reference
+ consists of three <em><b>arrays-of-arrays</b></em>. In other words, each of the
+ leading 
+ 
 <br>
 <br>
-  From a <em>visual</em> perspective, the second (<em>nested</em>) 
+<em>Visually</em>, the second (<em>nested</em>) 
  array (of the <em>three-dimensional</em> 
  array) contains three separate groups of arrays.
  These three separate groups, combined, <u><em><b>are</b></em> the third array</u> of 
  the three-dimensional array (e.g. the first group of arrays, <em>that make up the
  third array,</em> consists of two arrays – each of
- which contains exactly 5 elements ...)
+ which contains exactly 5 elements ...) -->
 <br>
 <br>
-The <em>println statement argument</em>, at line 8, can be interpreted as, 
+For example, the <em>println statement argument</em>, at line 8, can be interpreted as, 
 <span style="color: #0000CD">"... output
  the <em>array element</em> 
 located at index position [1][2][0], of the three-dimensional array".</span> 
