@@ -52,19 +52,7 @@ problem # &nbsp; 4.2</div>
 <li><a class="a0">}</a> </li>
 
 </ol>
-<!--
 
-
-/*
-Line 4 creates three arrays-of-arrays. The second array contains three separate groups of array.
-The first group in the second array contains two arrays, the third group contains three arrays,
-and the third group in the second array contains two arrays.
-
-The println statement at line 5 interprets the value of the array element at index position
-[1][2][0] (correctly) as the value 1.
-
- */ 
- -->
 </div>
 
 <br>  
@@ -77,13 +65,30 @@ The println statement at line 5 interprets the value of the array element at ind
 
 <div id="solution" class="hidden">
 <h2>
- The statement at line 4 creates a <em>three-dimensional</em> array reference 
- (named, <em>multiarray</em>). 
+ The statement at line 4 creates a <em>three-dimensional</em> <u>array <em>reference</em></u> 
+ named, <em>multiarray</em>. 
  <br><br>
- The <em>index location</em> of an element, in any multi-dimensional array, 
- can be defined syntactically through the use of brackets that <u>individually represent 
- each dimension of an array</u> – but that collectively specify an array element's unique 
- <em>index location</em>.
+ The <em>index <u>location</u></em> of an element in an array, 
+ is represented by an integer value, inside a pair of square brackets - <em>that follow the name of the array</em>.
+ <br><br>
+ To point to the location of an element of a <em>one-dimensional</em> array for example, 
+ a single pair of brackets that contain an integer value, would be used (e.g. <b><em>myarray</em> [4]</b> ). 
+ Similarly, to point to the location of an element in a <em>two-dimensional</em> array, two pair of brackets - each 
+ containing an integer value, is used (e.g. <b><em>myarray</em> [4][1]</b> ).
+ Accordingly, specifying the location of an element, of a <em>three-dimensional</em> array, requires that 
+ three pair of brackets (each containing an integer value) be used.
+ <br><br>
+Thus, the <em>println statement argument</em> at line 8, can be interpreted as 
+<span style="color: #0000CD">"... output
+ the <em>array element</em> 
+located at index position [1][2][0], of the three-dimensional array, name <em>multiarray</em>".</span> 
+The value of the array element located at that index position, of 
+the three-dimensional array, is <em>1</em>.
+<br><br>
+Note that, <em><u>the value</u> of the integer</em> inside of the pair of brackets (that represent an array element's index location)
+<em><u>could be represented</u> as the output of an expression</em> - that calculates a 
+value (e.g. <b><em>myarray</em> [4 % 4]</b> ). 
+ 
  <br><br>
 <!--
  The inner most dimension consists
@@ -102,13 +107,6 @@ The println statement at line 5 interprets the value of the array element at ind
  third array,</em> consists of two arrays – each of
  which contains exactly 5 elements ...) -->
  
-For example, the <em>println statement argument</em>, at line 8, can be interpreted as, 
-<span style="color: #0000CD">"... output
- the <em>array element</em> 
-located at index position [1][2][0], of the three-dimensional array".</span> 
-The value of the array element located at that index position, of 
-the three-dimensional array, is <em>1</em>.
-
 
 <br>
 <br> 
