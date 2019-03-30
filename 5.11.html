@@ -65,26 +65,28 @@ both a <em>for loop</em> statement, and a routine statement (at line 7) that are
  <em>true</em> or <em>false</em>).
  <br>
 <br>
-Ultimately, the <em>for loop</em> statement in this example repeats two times (i.e. as long as the 
+The <em>for loop</em> statement, at line 5, repeats two times (i.e. as long as the 
 <em>termination expression</em> evaluates to <em>true</em>) before the loop terminates, and 
-the code flow moves to the next statement (at line 7). 
+the code flow moves to the next statement (at line 7). Because the <em>for loop</em> (and the statement 
+following it) are nested inside of the <em>do</em> portion of the <em>do while</em>, it  
+always runs before the code in the <em>while</em> portion of the <em>do while</em> executes.
+
 <br>
 <br>
-Notably, each time that the <em>for loop</em> statement in this example repeats 
-however, the value of the 
+Notably, each time that the <em>for loop</em> statement in this example repeats, the value of the 
 variable <em><b>i</b></em> 
 is incremented by <em>one</em> 
 (due to the <em>post increment expression </em> <b>i ++</b> at line 5). This 
-causes the value of <em><b>i</b></em>, at the time that the <em>for loop</em> statement evaluates to
-false - and terminates, to be <em>six</em>. Although, this value is then immediately decreased by 
-one, 
-<em><u>after</u></em> the final statement in the <em><u>do</u></em> portion of the <em>do while</em> loop 
-statement executes (at line 7) .
+causes the value of <em><b>i</b></em>, when the <em>for loop</em> statement evaluates to
+false - and terminates, to be <em>6</em>. However, this value is then immediately decreased by 
+one (to the value of <em>5</em>), 
+<em><u>after</u></em> the final statement in the <em><u>do</u></em> portion of the 
+<em>do while</em> (at line 7) executes.
 <br>
 <br>
-When both statements that are nested
-inside of the <em><u>do</u></em> portion of the <em>do while</em> loop statement complete 
-their iterations, and
+When both statements,
+inside of the <em><u>do</u></em> portion of the <em>do while</em> loop, complete 
+their iterations  - and
 the code flow moves to the <em><u>while</u></em> portion of the <em>do while</em> loop 
 at line 8, the <em><u>while</u></em> portion of the <em>do while</em> loop evaluates to false 
 (i.e. 5 < 5  <em>is false</em>), causing the entire program code to terminate its execution.
