@@ -54,18 +54,19 @@ problem # &nbsp; 5.11</div>
 </h9>
 <div id="solution" class="hidden">
 <h2>
-The <em><u>do</u></em> portion of the <em><b>do while</b></em> loop statement in this example, 
-contains both a <em>for loop</em> statement, and a simple statement (at line 7) – nested inside of it. 
+In this example, the <em><u>do</u></em> portion of the <em><b>do while</b></em> loop statement 
+contains (within it) both a <em>for loop</em> statement (at line 5), and a simple statement (at line 7). 
 <br>
 <br>
- The absence of an initialization expression in the <em><b>for loop</b></em> statement (at line 5) means that the
- variable <em><b>i</b></em> assumes the value to which it was initialized at line 3. Note that, the only 
+ The absence of an initialization expression in the <em><b>for loop</b></em> (at line 5) means that the
+ variable <em><b>i</b></em> (in the second for loop expression, <em>i < 6</em>) assumes the value 
+ of 4 - to which it was initialized at line 3. Note that, the only 
  expression that absolutely <em><u>must</u></em> be present in a <em>for loop</em> statement, is
  the middle one – the <em>termination expression</em> (which always evaluates to either 
  <em>true</em> or <em>false</em>).
  <br>
 <br>
-The <em>for loop</em> statement, at line 5, repeats two times (i.e. as long as the 
+When this code is executed, the <em>for loop</em> statement, at line 5, repeats two times (i.e. as long as the 
 <em>termination expression</em> evaluates to <em>true</em>) before the loop terminates, and 
 the code flow moves to the next statement (at line 7). Because the <em>for loop</em> (and the statement 
 following it) are nested inside of the <em>do</em> portion of the <em>do while</em>, it  
@@ -89,7 +90,7 @@ inside of the <em><u>do</u></em> portion of the <em>do while</em> loop, complete
 their iterations  - and
 the code flow moves to the <em><u>while</u></em> portion of the <em>do while</em> loop 
 at line 8, the <em><u>while</u></em> portion of the <em>do while</em> loop evaluates to false 
-(i.e. 5 < 5  <em>is false</em>), causing the entire program code to terminate its execution.
+(i.e. 5 < 5  <em>is false</em>), causing the execution of the code to terminate.
  
  
 <br>
