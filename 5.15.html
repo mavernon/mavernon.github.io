@@ -40,7 +40,7 @@ problem # &nbsp; 5.15</div>
 <li><a class="a2">int  i = 2, j = 4, k = 0;</a> </li>
 <li><a class="a2">do while (i++ < 10) {</a> </li>
 <li><a class="a3">k ++; </a> </li>
-<li><a class="a2">} while ( j++ < 8);</a> </li>
+<li><a class="a2">} while (j++ < 8);</a> </li>
 <li><a class="a3">System.out.println (k); </a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
@@ -53,10 +53,20 @@ problem # &nbsp; 5.15</div>
 </h9>
 <div id="solution" class="hidden">
 <h2>
- After line 3 initializes three integer type variables to their respective values, ...
- 
- 
-
+ Line 3 initializes three integer type variables to their respective values. 
+ <br><br>
+ The <em>do</em> portion of the <em>do while</em> loop statement (starting at line 4, and 
+ including line 6) actually contains a <em>while</em> loop statement - embedded within it (i.e. starting
+ with the word <em>while</em>, at line 4). The <em>embedded</em> while loop statement ensures
+ that the variable <em>k</em> attains a value of <u>8</u>, before the while loop statement at line
+ 6, is ever evaluated.
+ <br><br>
+ When the while loop statement at line 6 <em>is</em> evaluated (and returns <em>true</em>), it includes
+  no follow-on action – and instead, simply loops (i.e. <em>repeats</em>) – until it evaluates to false.
+ <br><br>
+After the while loop statement at line 6 evaluates to false, the program's code flow transitions to the next statement 
+(at line 7), and prints the value of the variable <em>k</em> (... which was determined as a result of the
+embedded while loop that was previously executed at line 4).
 <br>
 <br> 
 <h7><script type="text/javascript" src="Last.js"></script></h7> 
