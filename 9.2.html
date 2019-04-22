@@ -29,30 +29,26 @@ if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
 <br>
 <h6>
 <div class="blue"><b>SELECTED JAVA API CLASSES</b>  <br>
-problem # &nbsp; 9.1</div>
+problem # &nbsp; 9.2</div>
 
 </h6>
 
 <div class="frame">
 <ol >
-<li><a class="a0">import java.time.LocalTime;</a> </li>
+<li><a class="a0">import java.time.LocalDate;</a> </li>
+<li><a class="a0">import java.time.temporal.ChronoUnit;</a> </li>
 <br>
 <li><a class="a0">public class Test {</a> </li>
-<li><a class="a1">public static void main(String []args) {</a> </li>
-<li><a class="a2">LocalTime currTime = </a> </li>
-<li><a class="a3">LocalTime.now();</a> </li>
-<li><a class="a2">System.out.println</a> </li>
-<li><a class="a3">("current time: "+currTime);</a> </li>
+<li><a class="a1">public static void main(String... args) {</a> </li>
+<li><a class="a2">LocalDate today = LocalDate.now();</a> </li>
+<li><a class="a2">LocalDate tomorrow = </a> </li>
+<li><a class="a3">today.plus(1, ChronoUnit.DAYS);</a> </li>
+<li><a class="a2">LocalDate yesterday = </a> </li>
+<li><a class="a3">tomorrow.minusDays(2);</a> </li>
 <br>
-<li><a class="a2">LocalTime givenTime = </a> </li>
-<li><a class="a3">LocalTime.of(2, 30);</a> </li>
-<li><a class="a2">System.out.println</a> </li>
-<li><a class="a3">("given time: "+givenTime);</a> </li>
-<br>
-<li><a class="a2">LocalTime secOfDay = </a> </li>
-<li><a class="a3">LocalTime.ofSecondOfDay(10160);</a> </li>
-<li><a class="a2">System.out.println</a> </li>
-<li><a class="a3">("total given seconds: "+secOfDay);</a> </li>
+<li><a class="a2">System.out.println(today);</a> </li>
+<li><a class="a2">System.out.println(tomorrow);</a> </li>
+<li><a class="a2">System.out.println(yesterday);</a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
 </ol> 
@@ -66,16 +62,12 @@ problem # &nbsp; 9.1</div>
 
 <div id="solution" class="hidden">
 <h2>
-The <em><b>LocalTime</b></em> class (imported from <em>java.time</em>, at line 1) 
-includes various methods that return specific components
-of the (actual) Local time. 
+
+This code creates calendar values for today, tomorrow and yesterday's date.
 <br>
 <br> 
-For example, the <em><u>now</u></em> method (at line 4) returns the
-current hour; minute; second and millisecond of the current day. However, the <em><u>of</u></em>
-method of class LocalTime (at line 6 and 8), requires that parameter values be
-provided - in order to execute the method.
-
+Note the various methods (at lines 5, 7 and 9) that are available to the 
+<em><b>LocalDate</b></em> class.
 
 <br>
 <br> 
