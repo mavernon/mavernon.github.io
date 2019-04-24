@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>SELECTED JAVA API CLASSES</b>  <br>
+problem # &nbsp; 9.3</div>
+
+</h6>
+
+<div class="frame">
+<ol >
+<li><a class="a0">import java.time.LocalDateTime;</a> </li>
+<br>
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static void main(String... args) {</a> </li>
+<li><a class="a2">LocalDateTime currTime = LocalDateTime.now();</a> </li>
+<li><a class="a2">System.out.println("current time: "+currTime);</a> </li>
+<br>
+<li><a class="a2">LocalDateTime givenTime;</a> </li>
+<li><a class="a2">givenTime = LocalDateTime.of(2019, 4, 24 , </a> </li>
+<li><a class="a2">13, 54, 30, 1235812341);</a> </li>
+<br>
+<li><a class="a2">System.out.println("given time is: "+givenTime);</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol> 
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+The <em><b>LocalDateTime</b></em> class (imported at line 1) is one of the most commonly used, in the 
+<em>java.time</em> package.
+It returns seven parameter values (i.e. year, month, day, hour, minute, second, nano second) – all based on the actual 
+ location of the computer, at the time of the program's execution.
+<br>
+<br> 
+Although <em>this problem compiles without errors</em>, the call to the <em><u>of</u></em> 
+method of the class 
+(at line 7) includes a parameter value (the last one) whose length is greater than the maximum number of 
+characters allowed - for that specific (<em>nanoseconds</em>) field .
+
+<br>
+<br>  
+Since the input provided in the nanosecond field exceeds the maximum length allowed
+ for that field (i.e. nine single int characters), 
+an exception (<em><b>java.time.DateTimeException: Invalid value</b></em>) occurs at this line of code,
+during run time.
+<br>
+<br>
+In fact, if any <em><u>given</u></em> parameter value is inconsistent with the acceptable <em>local</em> value, 
+of any of the <em>LocalDateTime</em> class parameters, an 
+<em><u>Invalid value</u></em> error will result at runtime (i.e. <u>after</u> the code <em>has 
+successfully compiled</em>). 
+<br>
+<br> 
+<h7><script type="text/javascript" src="Last.js"></script></h7> 
+<br>
+<br>
+</h2>
+</div>
+
+
+<h2>
+ <!--<a href="index.htm">Home</a> -->
+<div class="button">
+<input type="text" value="Home" onclick="history.back(-1)" />     
+</div>
+</h2>
+
+<br>
+<br>
+
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>
