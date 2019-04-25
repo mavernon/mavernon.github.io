@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>SELECTED JAVA API CLASSES</b>  <br>
+problem # &nbsp; 9.4</div>
+
+</h6>
+
+<div class="frame">
+<ol >
+<li><a class="a0">import java.time.LocalDateTime;</a> </li>
+<br>
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static void main(String... args) {</a> </li>
+<li><a class="a2">LocalDateTime date = LocalDateTime.parse</a> </li>
+<li><a class="a2">("2017-02-03T12:30:30");</a> </li>
+<li><a class="a2">System.out.println(date);</a> </li>
+<br>
+<li><a class="a2">LocalDateTime date1 = LocalDateTime.parse</a> </li>
+<li><a class="a2">("2017-02-03T12:30:30");</a> </li>
+<li><a class="a2">System.out.println(date1);</a> </li>
+<br>
+<li><a class="a2">LocalDateTime date2 = date</a> </li>
+<li><a class="a2">System.out.println(date2);</a> </li>
+<br>
+<li><a class="a2">System.out.println(date.equals(date1));</a> </li>
+<li><a class="a2">System.out.println(date.equals(date2));</a> </li>
+<li><a class="a2">System.out.println(date == date2);</a> </li>
+<li><a class="a2">System.out.println(date1.equals(date2));</a> </li>
+<li><a class="a2">System.out.println(date1 == date2);</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol> 
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+The equals() method returns true at lines 12 and 13 because the
+<em><b>LocalDateTime</b></em> class computes equality based on an 
+instance's state. In other words, <em>LocalDateTime</em> is both <em>final</em> and 
+<em>immutable</em> – like the <em>String</em> class.
+<br>
+<br>
+Consequently, <u>the use of <em>reference equality</em> with the <em>LocalDateTime</em> class, 
+should be avoided</u> - due
+to the possibility of unpredictable results. For example, while line 14 returns true, and line 15 returns true;
+line 16 returns false.
+
+
+<br>
+<br> 
+<h7><script type="text/javascript" src="Last.js"></script></h7> 
+<br>
+<br>
+</h2>
+</div>
+
+
+<h2>
+ <!--<a href="index.htm">Home</a> -->
+<div class="button">
+<input type="text" value="Home" onclick="history.back(-1)" />     
+</div>
+</h2>
+
+<br>
+<br>
+
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>
