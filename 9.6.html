@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "_//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function unhide(divID) {
+var item = document.getElementById(divID);
+if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
+}
+
+</script>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta http-equiv="content="no-cache" />
+	<title>monolytical</title>
+	<link href="css01.css" media="Screen" rel="stylesheet" type="text/css" />
+   	<link href="mobile.css" media="handheld, only screen and (max-width: 320px), only screen 
+		 and (max-device-width: 480px)" rel="stylesheet" type="text/css" /> 
+	<link href="mobile.css" media="tablet, only screen and (max-width: 768px), only screen 
+		 and (max-device-width: 1024pxpx), and (-webkit-min-device-pixel-ratio: 1)" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+<main>
+<header>
+<br>
+<!--
+<h1><a href="index.htm" style="text-decoration: none"><em>Monolytical</em></a>
+</h1>
+-->
+
+<br>
+<h6>
+<div class="blue"><b>SELECTED JAVA API CLASSES</b>  <br>
+problem # &nbsp; 9.6</div>
+
+</h6>
+
+<div class="frame"> 
+
+<ol >
+<li><a class="a0">import java.time.LocalDate;</a> </li>
+<li><a class="a0">import java.time.Month;</a> </li>
+<li><a class="a0">import java.time.format.DateTimeFormatter;</a> </li>
+<li><a class="a0">import java.time.format.FormatStyle;</a> </li>
+<br>
+<br>
+<li><a class="a0">public class Test {</a> </li>
+<li><a class="a1">public static void main(String[] args) {</a> </li>
+<li><a class="a1">LocalDate pDefined = </a> </li>
+<li><a class="a2">LocalDate.of(2020, Month.JANUARY, 20);</a> </li>
+<li><a class="a2">System.out.println(pDefined.format</a> </li>
+<li><a class="a3">(DateTimeFormatter.ISO_LOCAL_DATE));</a> </li>
+<br>
+<li><a class="a1">DateTimeFormatter fmt = DateTimeFormatter</a> </li>
+<li><a class="a2">.ofLocalizedDate(FormatStyle.SHORT);</a> </li>
+<li><a class="a2">System.out.println("Short  Date: " </a> </li>
+<li><a class="a3">+ fmt.format(pDefined));</a> </li>
+<br>
+<li><a class="a1">fmt = DateTimeFormatter</a> </li>
+<li><a class="a2">.ofLocalizedDate(FormatStyle.MEDIUM);</a> </li>
+<li><a class="a2">System.out.println("Medium Date: " </a> </li>
+<li><a class="a3">+ fmt.format(pDefined));</a> </li>
+<br>
+<li><a class="a1">fmt = DateTimeFormatter</a> </li>
+<li><a class="a2">.ofPattern("E yyyy-MM-dd ");</a> </li>
+<li><a class="a2">System.out.println</a> </li>
+<li><a class="a3">(pDefined.format(fmt));</a> </li>
+<li><a class="a1">}</a> </li>
+<li><a class="a0">}</a> </li>
+</ol>
+
+</div>
+<br>
+
+<h9>
+<a href="javascript:unhide('solution'); " Style="text-decoration: none"> <em>Details ...</em></a>
+</h9>
+
+<div id="solution" class="hidden">
+<h2>
+Like the String class, classes in the <em><b>java.time</b></em> package are immutable and final;
+ and, as a result, don't require the use of the <em>new</em> keyword in order to create an object instance.
+<br>
+<br>
+The <em><u>DateTimeFormatter</u></em> class, of this package (line 3), provides three different types of
+<em>formatters</em> to use in <em>formatting</em> Date/Time output:
+<br>
+<br>
+Predefined <em>standard</em> formatter's, identifiable by their <em>usual</em> assignment to a static constant
+(e.g. ISO_LOCAL_DATE_TIME, .ISO_LOCAL_TIME), are implemented by calling their
+<em><b>format</b></em> method (e.g. line 9).
+<br>
+<br>
+<em>Locale-specific</em> formatter's (which use <em>styles</em> e.g. SHORT, MEDIUM) are used to present
+<em>human-readable</em> Date/Time output (e.g. lines 11 - 18).
+<br>
+<br>
+The final approach to formatting Date/Time output, is to create your own format, by
+<em>specifying a pattern</em> (as shown on line 20 )
+
+<br>
+<br>
+In any case, it is always necessary to identify an explicit reference to one of the <em>java.time</em> 
+classes (e.g. <em><u>LocalDate</u></em> at line 7), understanding that the formatting approach chosen,
+<u>must be applicable to the type</u> identified. Otherwise, a runtime error will result (after the
+code is compiled, and attempts to execute). The output that results from running this code is:<br><br>
+<span style="color: #0000CD"><em>
+2020-01-20<br>
+Short Date: 1/20/20<br>
+Medium Date: Jan 20, 2020<br>
+Mon 2020-01-20 </em></span>
+
+<br>
+<br> 
+<h7><script type="text/javascript" src="Last.js"></script></h7> 
+<br>
+<br>
+</h2>
+</div>
+
+
+<h2>
+ <!--<a href="index.htm">Home</a> -->
+<div class="button">
+<input type="text" value="Home" onclick="history.back(-1)" />     
+</div>
+</h2>
+
+<br>
+<br>
+
+
+
+
+<!--<p class="third"><a href="contactForm.html" style="text-decoration: none"><em>
+comments...</em></a></p> -->
+</header>
+</main>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"></body>
+</html>
