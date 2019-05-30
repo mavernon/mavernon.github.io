@@ -30,8 +30,8 @@ if (item) { item.className=(item.className=='hidden')?'unhidden':'hidden'; }
 
 <br>
 <h6>
-<div class="blue"><b>USING LOOP CONSTRUCTS</b>  <br>
-problem # &nbsp; 4.1</div>
+<div class="blue"><b>JAVA BASICS</b>  <br>
+problem # &nbsp; 3.1</div>
 
 </h6>
 
@@ -42,10 +42,10 @@ problem # &nbsp; 4.1</div>
 <ol >
 <li><a class="a0">public class Test {</a> </li>
 <li><a class="a1">public static void main(String []args) {</a> </li>
-<li><a class="a2">int [][] a = {{10, 20}, {30, 40}};</a> </li>
-<li><a class="a2">int [] b = a[0];</a> </li>
-<li><a class="a2">a[0][0] = 50;</a> </li>
-<li><a class="a2">System.out.println(b[0]);</a> </li>
+<li><a class="a2">System.out.println(.8f);</a> </li>
+<li><a class="a2">System.out.println(.8);</a> </li>
+<li><a class="a2">System.out.println(2e1f);</a> </li>
+<li><a class="a2">System.out.println(9E-9d);</a> </li>
 <li><a class="a1">}</a> </li>
 <li><a class="a0">}</a> </li>
 
@@ -63,40 +63,44 @@ problem # &nbsp; 4.1</div>
 
 <div id="solution" class="hidden">
 <h2>
- A <em><b>two-dimensional array</b></em> (i.e. <em>an array - of an array</em>) 
- of type <em>int</em> is created at line 3. 
+ Both arguments (lines 3 and 4) represent the two types of <em>floating point</em> literals
+that are available in Java; <em><b>float</b></em> (<em>32</em> bit) and
+<em><b>double</b></em> (<em>64</em> bit), respectively. In either case, including the
+<em>whole</em> number part, 0, is optional. However, a <em><u>float</u></em> must
+always be succeeded by the letter <b>F</b> (upper or, lower case) – while following
+a <em><u>double</u></em> value with the letter <b>d</b> (upper or, lower case) is optional.
 <br>
 <br>
-At line 4, <em>the array at index position zero</em> of the two-dimensional array at line 3,
-is assigned to a reference – int array,<em> b</em>.
+Lines 5 and 6 illustrate a float and double that include an exponent. When the
+exponent portion includes a <em>signed</em> integer (as these do), if that integer is positive, including
+the + sign is optional (e.g. line 5). However, if the <em>signed</em> integer is negative, a negative sign
+preceding it must be included (e.g. line 6).
 <br>
 <br>
-The value <em>50</em> is assigned (at line 5) to replace the value of the first element 
-(<em>10</em>), that occurs in the first array 
-of the <em>two-dimensional array</em> that was 
-created at line 3. This modified value of the <em>first element</em>, is mirrored <u>in the 
-<em>reference</em></u>
-to that same array ( int [ ] <em>b</em>) which was created by the assignment at line 4. 
-
-<br>
-<br>
-By using the array reference as an argument, the output to the <em>println</em> statement at line 6
-confirms that the value assigned at line 5, simultaneously modifies both the first element 
-of the array reference, and the first element of the original multi-dimensional array 
-(created at line 3), to the value <em>50</em>.
+The result of running this code is:<br>
+0.8<br>
+0.8<br>
+20.0<br>
+9.0E-9
 
 
-<br>
-<br>
+
 <br>
 <br> 
-<h7><script type="text/javascript" src="Last.js"></script></h7>
+<h7><script type="text/javascript" src="Last.js"></script></h7> 
+<br>
+<br>
 </h2>
 </div>
 
+
 <h2>
-<a href="index.htm" >Home</a>
+ <!--<a href="index.htm">Home</a> -->
+<div class="button">
+<input type="text" value="Home" onclick="history.back(-1)" />     
+</div>
 </h2>
+
 <br>
 <br>
 
