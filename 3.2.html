@@ -64,18 +64,24 @@ problem # &nbsp; 3.2</div>
 <h2>
  In java, an <em><b>int</b></em> (integer variable), is any whole number with
 a maximum value of 2,147,483,648 – that doesn't include an L, as a suffix.
-In other words, any <em>int</em> thats written in source code, that's greater than 2,147,483,648 
-(e.g. 3,000,000,000) must be immediately followed by an "L" .
+In other words, any <em>int</em> thats written in source code, <em>that's greater than</em> 
+2,147,483,648 
+(e.g. 3,000,000,000) must be immediately followed by an "L", or else – a compiler error will result.
 <br>
 <br>
 
 For example, although the value being assigned to the <em>long</em> (integer variable)
- <em><b>a</b></em> on line 3, is far less than the
-maximum - allowed value of a <em>long</em> (integer variable) in Java, the value thats being 
-assigned (<em>9876543210</em>) 
-<em>is</em> greater than the allowable value of an <em>int</em> ( i.e.<em> <u>the absence of 
-an <b>L</b></u> following
-the value</em> suggests that it's an <u>int</u> ). As a result,
+ <em><b>a</b></em> at line 3, is far less than the
+maximum allowed value of a <em>long</em> (integer variable), that value
+ (<em>9876543210</em>) 
+<em>is</em> greater than the allowable value of an <em>int</em> variable type 
+(it's <em>implied</em> type), to which it is evaluated – before the assignment takes place
+ ( i.e.<em> the lack of 
+an <b>L</b>  after an integer value</em> always implies that it's type
+ is <u><em>int</em></u> ). 
+<br>
+<br>
+As a result, because the value being assigned is greater than that allowed for an <em>int</em> type, 
 this segment of code won't even compile.
 
 <br>
