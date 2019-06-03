@@ -62,19 +62,21 @@ problem # &nbsp; 3.2</div>
 
 <div id="solution" class="hidden">
 <h2>
- In java, an <em><b>int</b></em>, Integer variable, is any whole number with
+ In java, an <em><b>int</b></em> (integer variable), is any whole number with
 a maximum value of 2,147,483,648 – that doesn't include an L, as a suffix.
-In other words, any number greater than 2,147,483,648 (e.g. 3,000,000,000), must be
-immediately followed by an "L" .
+In other words, any <em>int</em> thats written in source code, that's greater than 2,147,483,648 
+(e.g. 3,000,000,000) must be immediately followed by an "L" .
 <br>
 <br>
 
-Therefore, although the value being assigned to the <em>long</em> Integer variable <em>a</em> 
- (on line 4) is far less than the authorized,
-maximum value of a <em>long</em> Integer variable in java, the value being assigned 
-(i.e. <em>9876543210</em>)
-<u>is</u> greater than the allowable value of an <em>int</em> type, Integer variable. As a result,
-this code segment won't even compile.
+For example, although the value being assigned to the <em>long</em> (integer variable)
+ <em><b>a</b></em> on line 3, is far less than the
+maximum - allowed value of a <em>long</em> (integer variable) in Java, the value thats being 
+assigned (<em>9876543210</em>) 
+<em>is</em> greater than the allowable value of an <em>int</em> ( i.e.<em> <u>the absence of 
+an <b>L</b></u> following
+the value</em> suggests that it's an <u>int</u> ). As a result,
+this segment of code won't even compile.
 
 <br>
 <br> 
